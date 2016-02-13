@@ -233,5 +233,9 @@ _Pvt_Extensions
 # Paket dependency manager
 .paket/paket.exe
 
+
+#adding the v12.suo 
+*.v12.suo
+
 # FAKE - F# Make
 .fake/
