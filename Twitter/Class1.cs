@@ -8,5 +8,6 @@ namespace Twitter
 {
     public class Class1
     {
+        private string tweet; 
     }
 }
