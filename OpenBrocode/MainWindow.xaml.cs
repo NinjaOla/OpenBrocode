@@ -20,9 +20,29 @@ namespace OpenBrocode
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public MainWindow windowController
+        {
+            get
+            {
+                return ((MainWindow)System.Windows.Application.Current.MainWindow);
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
+            windowController.aTest.Content = "this is a test";
+            windowController.aTest.Background = Brushes.Black; 
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Button butt = (Button)sender;
+ 
+            
         }
     }
 }
