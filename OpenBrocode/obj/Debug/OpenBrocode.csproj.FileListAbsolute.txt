@@ -1,4 +1,8 @@
 C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
 C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
 C:\Users\JohnMartin\Dropbox\Open-Brocode\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
+<<<<<<< HEAD
 C:\Users\olama\Documents\GitHub\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
+=======
+C:\Users\Kevin\Documents\GitHub\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
+>>>>>>> 695f78836a5f9e8cf7d59f5bf2414205a861f476
