@@ -12,14 +12,14 @@ namespace Server
 {
     internal class Startup
     {
-        public void Configuration(IAppBuilder appBuilder)
+        /*public void Configuration(IAppBuilder appBuilder)
         {
             IdentityServerServiceFactory factory = new IdentityServerServiceFactory();
 
             factory
                     .UseInMemoryClients(Clients.Get())
-                    .UseInMemoryClients(Scopes.get())
+                    .UseInMemoryClients(Scopes.Get())
                     .UseInMemoryClients(Users.get());
-        }
+        }*/
     }
 }
