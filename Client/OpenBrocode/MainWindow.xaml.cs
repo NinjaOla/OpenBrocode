@@ -21,6 +21,7 @@ namespace OpenBrocode
     public partial class MainWindow : Window
     {
 
+
         public MainWindow windowController
         {
             get
@@ -43,6 +44,23 @@ namespace OpenBrocode
             Button butt = (Button)sender;
  
             
+        }
+
+
+        private void _btnSetting_Click(object sender, RoutedEventArgs e)
+        {
+            settingsToggle();
+        }
+
+        private void settingsToggle()
+        {
+            
+            label1.Visibility = Visibility.Hidden;
+            label2.Visibility = Visibility.Hidden;
+            label3.Visibility = Visibility.Hidden;
+            background_colorbox.Visibility = Visibility.Hidden;
+            topBar_colorbox.Visibility = Visibility.Hidden;
+            sideBar_colorbox.Visibility = Visibility.Hidden;
         }
     }
 }
