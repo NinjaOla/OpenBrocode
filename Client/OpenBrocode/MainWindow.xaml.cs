@@ -71,7 +71,7 @@ namespace OpenBrocode
             background_colorbox.Visibility = Visibility.Visible;
             topBar_colorbox.Visibility = Visibility.Visible;
             sideBar_colorbox.Visibility = Visibility.Visible;
-            _btnSetJSON.Visibility = Visibility.Visible;
+            _btnRetrieveJSON.Visibility = Visibility.Visible;
             _btnSetJSON.Visibility = Visibility.Visible;
         }
 
