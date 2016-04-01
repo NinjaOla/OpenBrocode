@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace OpenBrocode
 {
@@ -34,7 +36,15 @@ namespace OpenBrocode
         {
             InitializeComponent();
             windowController.aTest.Content = "this is a test";
-            windowController.aTest.Background = Brushes.Black; 
+            windowController.aTest.Background = Brushes.Black;
+            windowController.label1.Visibility = Visibility.Hidden;
+            windowController.label2.Visibility = Visibility.Hidden;
+            windowController.label3.Visibility = Visibility.Hidden;
+            windowController.background_colorbox.Visibility = Visibility.Hidden;
+            windowController.topBar_colorbox.Visibility = Visibility.Hidden;
+            windowController.sideBar_colorbox.Visibility = Visibility.Hidden;
+            windowController._btnRetrieveJSON.Visibility = Visibility.Hidden;
+            windowController._btnSetJSON.Visibility = Visibility.Hidden;
         }
 
 
@@ -55,12 +65,32 @@ namespace OpenBrocode
         private void settingsToggle()
         {
             
-            label1.Visibility = Visibility.Hidden;
-            label2.Visibility = Visibility.Hidden;
-            label3.Visibility = Visibility.Hidden;
-            background_colorbox.Visibility = Visibility.Hidden;
-            topBar_colorbox.Visibility = Visibility.Hidden;
-            sideBar_colorbox.Visibility = Visibility.Hidden;
+            label1.Visibility = Visibility.Visible;
+            label2.Visibility = Visibility.Visible;
+            label3.Visibility = Visibility.Visible;
+            background_colorbox.Visibility = Visibility.Visible;
+            topBar_colorbox.Visibility = Visibility.Visible;
+            sideBar_colorbox.Visibility = Visibility.Visible;
+            _btnSetJSON.Visibility = Visibility.Visible;
+            _btnSetJSON.Visibility = Visibility.Visible;
+        }
+
+        private void _btnRetrieveJSON_Click(object sender, RoutedEventArgs e)
+        {
+            //deserializing the object(class) from the file
+            String jsonString = File.ReadAllText("json.json");
+            LayoutClass l1 = JsonConvert.DeserializeObject<LayoutClass>(jsonString);
+            background_colorbox.Text = l1.backgroundColor;
+            topBar_colorbox.Text = l1.topBoxColor;
+            sideBar_colorbox.Text = l1.sideBoxColor;
+        }
+
+        private void _btnSetJSON_Click(object sender, RoutedEventArgs e)
+        {
+            //Serializes the object(class) to the file
+            LayoutClass l2 = new LayoutClass { backgroundColor = background_colorbox.Text, sideBoxColor = sideBar_colorbox.Text, topBoxColor = topBar_colorbox.Text };
+            String jsonOutput = JsonConvert.SerializeObject(l2);
+            File.WriteAllText("json.json", jsonOutput);
         }
     }
 }
