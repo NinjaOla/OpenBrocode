@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace Server.Settings
 {
-
-    // https://www.scottbrady91.com/Identity-Server/Identity-Server-3-Standalone-Implementation-Part-1
-    class Clients
+    public class Clients
     {
-        public static IEnumerable<Client> Get() {
+        public static IEnumerable<Client> Get()
+        {
             return new List<Client> {
                 new Client {
                     ClientId = "1234", 
@@ -30,7 +29,6 @@ namespace Server.Settings
                     AccessTokenType = AccessTokenType.Jwt 
                 }
             };
-
         }
     }
 }
