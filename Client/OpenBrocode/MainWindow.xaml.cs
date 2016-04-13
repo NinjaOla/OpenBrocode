@@ -32,8 +32,8 @@ namespace OpenBrocode
         public MainWindow()
         {
             InitializeComponent();
-            windowController.aTest.Content = "this is a test";
-            windowController.aTest.Background = Brushes.Black; 
+            //windowController.aTest.Content = "this is a test";
+            //windowController.aTest.Background = Brushes.Black; 
         }
 
 
@@ -43,6 +43,11 @@ namespace OpenBrocode
             Button butt = (Button)sender;
  
             
+        }
+
+        private void HomeView_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

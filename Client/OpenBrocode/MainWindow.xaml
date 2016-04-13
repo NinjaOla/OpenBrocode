@@ -1,9 +1,16 @@
 ﻿<Window x:Class="OpenBrocode.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:OpenBrocode"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button Content="Button" x:Name="aTest" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Cursor="Help"/>
 
-    </Grid>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:LeftSideBar}">
+            <local:LeftSideBar />
+        </DataTemplate>
+    </Window.Resources>
+    <DockPanel HorizontalAlignment="Left" Height="305" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="505">
+        <local:LeftSideBar Height="305" VerticalAlignment="Top"/>
+
+    </DockPanel>
 </Window>
