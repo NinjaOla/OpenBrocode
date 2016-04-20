@@ -18,11 +18,12 @@ namespace OpenBrocode
     /// <summary>
     /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class LeftSideBar : UserControl
+    public partial class LeftSideBarUC : UserControl
     {
-        public LeftSideBar()
+        public LeftSideBarUC()
         {
             InitializeComponent();
         }
+
     }
 }

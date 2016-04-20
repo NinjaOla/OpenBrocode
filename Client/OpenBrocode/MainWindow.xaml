@@ -4,13 +4,21 @@
         xmlns:local="clr-namespace:OpenBrocode"
         Title="MainWindow" Height="350" Width="525">
 
-    <Window.Resources>
-        <DataTemplate DataType="{x:Type local:LeftSideBar}">
-            <local:LeftSideBar />
-        </DataTemplate>
-    </Window.Resources>
-    <DockPanel HorizontalAlignment="Left" Height="305" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="505">
-        <local:LeftSideBar Height="305" VerticalAlignment="Top"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-    </DockPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Name="stackLeft" Grid.Row="1" Grid.Column="0"/>
+        <StackPanel Name="stackMid" Grid.Row="1" Grid.Column="1"/>
+        <StackPanel Name="stackTop" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <Image x:Name="Nyan_cat_animation_new_gif" Margin="-31,10,-255,-261" Grid.Row="1" Source="Nyan_cat_animation_new.gif" Stretch="Fill" Grid.ColumnSpan="2"/>
+
+    </Grid>
 </Window>

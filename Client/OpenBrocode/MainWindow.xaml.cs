@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Imaging;
+using System.Windows.Media.Animation;
 
 namespace OpenBrocode
 {
@@ -34,20 +36,19 @@ namespace OpenBrocode
             InitializeComponent();
             //windowController.aTest.Content = "this is a test";
             //windowController.aTest.Background = Brushes.Black; 
+            loadPanel();
         }
 
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void loadPanel()
         {
-            
-            Button butt = (Button)sender;
- 
-            
-        }
+            LeftSideBarUC leftUcObject = new LeftSideBarUC();
+            stackLeft.Children.Add(leftUcObject);
 
-        private void HomeView_Loaded(object sender, RoutedEventArgs e)
-        {
+            HomeViewUC midUcObject = new HomeViewUC();
+            stackMid.Children.Add(midUcObject);
 
+            TopBarUC topUcObject = new TopBarUC();
+            stackTop.Children.Add(topUcObject);
         }
     }
 }
