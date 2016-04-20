@@ -8,7 +8,7 @@
              d:DesignHeight="50" d:DesignWidth="80">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Button Content="Home" Name="_btnHome" Margin="5,5"/>
+            <Button Content="Home" Name="_btnHome" Margin="5,5" Click="_btnHome_Click"/>
             <Button Content="Test View" Name="_btnTestView" Margin="5,5"/>
         </StackPanel>
     </Grid>

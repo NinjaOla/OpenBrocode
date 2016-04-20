@@ -120,9 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Nyan_cat_animation_new.gif" />
-    <Content Include="Resources\Nyan_cat_animation_new.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Resources\Nyan_cat_animation_new.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

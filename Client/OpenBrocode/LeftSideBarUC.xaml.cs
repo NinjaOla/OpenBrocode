@@ -25,5 +25,9 @@ namespace OpenBrocode
             InitializeComponent();
         }
 
+        private void _btnHome_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

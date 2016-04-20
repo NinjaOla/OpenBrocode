@@ -18,7 +18,6 @@
         <StackPanel Name="stackLeft" Grid.Row="1" Grid.Column="0"/>
         <StackPanel Name="stackMid" Grid.Row="1" Grid.Column="1"/>
         <StackPanel Name="stackTop" Grid.Row="0" Grid.ColumnSpan="2"/>
-        <Image x:Name="Nyan_cat_animation_new_gif" Margin="-31,10,-255,-261" Grid.Row="1" Source="Nyan_cat_animation_new.gif" Stretch="Fill" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
