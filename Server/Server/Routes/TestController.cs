@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace Server.Routes
 {
     [Route("test")]
-    public class TestController : ApiController
+    class TestController : ApiController
     {
         public IHttpActionResult Get()
         {
@@ -16,9 +17,9 @@ namespace Server.Routes
 
             return Json(new 
             {
-                message = "Ok Computer", 
+                messsage = "Ok computer",
                 client = caller.FindFirst("client_id").Value
-            }); 
+            });
         }
     }
 }
