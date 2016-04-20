@@ -10,6 +10,9 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+#ignore the debug files. 
+/OpenBrocode/bin/Debug/OpenBrocode.vshost.exe
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -245,3 +248,6 @@ _Pvt_Extensions
 # JetBrains Rider
 .idea/
 *.sln.iml
+OpenBrocode/bin/Debug/OpenBrocode.vshost.exe
+
+OpenBrocode.sln
