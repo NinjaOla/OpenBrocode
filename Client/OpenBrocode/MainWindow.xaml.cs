@@ -50,5 +50,13 @@ namespace OpenBrocode
             TopBarUC topUcObject = new TopBarUC();
             stackTop.Children.Add(topUcObject);
         }
+
+        public void loadFacePanel()
+        {
+            stackMid.Children.Clear();
+            FacebookUC midFaceUC = new FacebookUC();
+            stackMid.Children.Add(midFaceUC);
+        }
+
     }
 }

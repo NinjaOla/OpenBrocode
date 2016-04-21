@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:OpenBrocode"
              mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="80">
+             d:DesignHeight="200" d:DesignWidth="80">
     <Grid>
         <StackPanel Orientation="Vertical">
             <Button Content="Home" Name="_btnHome" Margin="5,5" Click="_btnHome_Click" MinHeight="25" MinWidth="65" />

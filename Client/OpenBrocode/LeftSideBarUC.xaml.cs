@@ -32,6 +32,11 @@ namespace OpenBrocode
 
         private void _btnFacebook_Click(object sender, RoutedEventArgs e)
         {
+
+            //Creates a reference to the mainwindow instead of a new instance, then uses the public method loadFacePanel in MainWindow
+
+            MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
+            mwObj.loadFacePanel();
             
         }
     }
