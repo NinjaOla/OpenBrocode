@@ -16,7 +16,7 @@ namespace Server_MVC
             {
                 Enabled = true,
                 ClientName = "MVC Client",
-                ClientId = "mvc",
+                ClientId = Config.clientId,
                 Flow = Flows.Implicit,
 
                 RedirectUris = new List<string>

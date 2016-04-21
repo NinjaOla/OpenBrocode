@@ -9,7 +9,9 @@ namespace Server_MVC
     {
         public static readonly string host = "https://localhost:44319/";
 
-        public static readonly string authorityLink = host + "identity"; 
+        public static readonly string authorityLink = host + "identity";
+
+        public static readonly string clientId = "mvc"; 
 
     }
 }
