@@ -33,5 +33,11 @@ namespace OpenBrocode
         {
             lblTop.Content = "Name: " + Environment.UserName;
         }
+
+        private void _btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
+            mwObj.loadSettingsPanel();
+        }
     }
 }

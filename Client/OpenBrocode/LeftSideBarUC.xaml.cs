@@ -27,17 +27,28 @@ namespace OpenBrocode
 
         private void _btnHome_Click(object sender, RoutedEventArgs e)
         {
+            //Creates a reference to the mainwindow instead of a new instance, then uses the public method loadPanel in Mainwindow
 
+            MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
+            mwObj.loadHomePanel();
         }
 
         private void _btnFacebook_Click(object sender, RoutedEventArgs e)
         {
-
-            //Creates a reference to the mainwindow instead of a new instance, then uses the public method loadFacePanel in MainWindow
-
             MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
-            mwObj.loadFacePanel();
-            
+            mwObj.loadFacePanel();           
+        }
+
+        private void _btnMail_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
+            mwObj.loadMailPanel();
+        }
+
+        private void _btnTwitter_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
+            mwObj.loadTwitterPanel();
         }
     }
 }

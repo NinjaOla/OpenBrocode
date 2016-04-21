@@ -60,8 +60,17 @@
     <Compile Include="HomeViewUC.xaml.cs">
       <DependentUpon>HomeViewUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MailUC.xaml.cs">
+      <DependentUpon>MailUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsUC.xaml.cs">
+      <DependentUpon>SettingsUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TopBarUC.xaml.cs">
       <DependentUpon>TopBarUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterUC.xaml.cs">
+      <DependentUpon>TwitterUC.xaml</DependentUpon>
     </Compile>
     <Page Include="FacebookUC.xaml">
       <SubType>Designer</SubType>
@@ -72,6 +81,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LeftSideBarUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MailUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,7 +103,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SettingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TopBarUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TwitterUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

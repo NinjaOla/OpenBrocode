@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Name="stackTop" Orientation="Horizontal" Margin="0,0,0,275" Height="25">
             <Label Content="Test label at the top UC " Name="lblTop"/>
-            <Button Content="Settings" Name="_btnSettings" />
+            <Button Content="Settings" Name="_btnSettings" Click="_btnSettings_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>
