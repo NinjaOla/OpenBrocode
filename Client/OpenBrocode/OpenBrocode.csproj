@@ -54,12 +54,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FacebookUC.xaml.cs">
+      <DependentUpon>FacebookUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomeViewUC.xaml.cs">
       <DependentUpon>HomeViewUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="TopBarUC.xaml.cs">
       <DependentUpon>TopBarUC.xaml</DependentUpon>
     </Compile>
+    <Page Include="FacebookUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HomeViewUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

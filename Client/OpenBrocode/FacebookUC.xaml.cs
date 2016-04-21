@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace OpenBrocode
 {
     /// <summary>
-    /// Interaction logic for HomeView.xaml
+    /// Interaction logic for FacebookUC.xaml
     /// </summary>
-    public partial class LeftSideBarUC : UserControl
+    public partial class FacebookUC : UserControl
     {
-        public LeftSideBarUC()
+        public FacebookUC()
         {
             InitializeComponent();
-        }
-
-        private void _btnHome_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void _btnFacebook_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }
