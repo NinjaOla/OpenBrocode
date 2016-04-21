@@ -16,7 +16,7 @@ namespace Server
     {
         public void Configuration(IAppBuilder app)
         {
-            /*var options = new IdentityServerOptions
+            var options = new IdentityServerOptions
             {
                 Factory = new IdentityServerServiceFactory() 
                     .UseInMemoryClients(Clients.Get())
@@ -27,11 +27,26 @@ namespace Server
                 
             };
 
-            app.UseIdentityServer(options); */
+
+            var config = new HttpConfiguration();
+
+            config.MapHttpAttributeRoutes();
+
+            config.Routes.MapHttpRoute(
+                name:"Test",
+                routeTemplate: "test",
+                defaults: new { controller = new TestController()}
+            ); 
+
+            config.Filters.Add(new AuthorizeAttribute());
+
+            app.UseWebApi(config); 
+
+            app.UseIdentityServer(options); 
 
             
             // accept access tokens from identityserver and require a scope of 'api1'
-            app.UseIdentityServerBearerTokenAuthentication(new IdentityServerBearerTokenAuthenticationOptions
+            /*app.UseIdentityServerBearerTokenAuthentication(new IdentityServerBearerTokenAuthenticationOptions
             {
                 Authority = "http://localhost:5000",
                 ValidationMode = ValidationMode.ValidationEndpoint,
@@ -41,12 +56,15 @@ namespace Server
 
             // configure web api
             var config = new HttpConfiguration();
+
             config.MapHttpAttributeRoutes();
 
             // require authentication for all controllers
             config.Filters.Add(new AuthorizeAttribute());
 
-            app.UseWebApi(config);
+            app.UseWebApi(config);*/
         }
+
+
     }
 }
