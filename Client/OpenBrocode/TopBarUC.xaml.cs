@@ -37,7 +37,7 @@ namespace OpenBrocode
         private void _btnSettings_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
-            mwObj.loadSettingsPanel();
+            mwObj.loadPanel(new SettingsUC());
         }
     }
 }
