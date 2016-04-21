@@ -18,18 +18,7 @@
         <StackPanel Name="stackLeft" Grid.Row="1" Grid.Column="0"/>
         <StackPanel Name="stackMid" Grid.Row="1" Grid.Column="1"/>
         <StackPanel Name="stackTop" Grid.Row="0" Grid.ColumnSpan="2"/>
-        <WrapPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
-            <Button Content="Home"/>
-        </WrapPanel>
-        <WrapPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
-            <Button Content="Facebook"/>
-            <Button Content="Twitter"/>
-            <Button Content="Mail"/>
-            <Button Content="Twitch"/>
-            <Button Content="Instagram"/>
-            <Button Content="Grindr"/>
 
-        </WrapPanel>
 
     </Grid>
 </Window>
