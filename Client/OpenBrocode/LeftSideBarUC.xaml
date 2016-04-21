@@ -8,9 +8,9 @@
              d:DesignHeight="50" d:DesignWidth="80">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Button Content="Home" Name="_btnHome" Margin="5,5" Click="_btnHome_Click"/>
-            <Button Content="Test View" Name="_btnTestView" Margin="5,5"/>
-            <Button Content="Facebook" Name="_btnFacebook" Margin="5,5" Click="_btnFacebook_Click"/>
+            <Button Content="Home" Name="_btnHome" Margin="5,5" Click="_btnHome_Click" MinHeight="25" MinWidth="65" />
+            <Button Content="Test View" Name="_btnTestView" Margin="5,5" MinHeight="25" MinWidth="65" />
+            <Button Content="Facebook" Name="_btnFacebook" Margin="5,5" Click="_btnFacebook_Click" MinHeight="25" MinWidth="65" />
             
         </StackPanel>
     </Grid>
