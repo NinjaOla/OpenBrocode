@@ -24,6 +24,14 @@ namespace OpenBrocode
         public TopBarUC()
         {
             InitializeComponent();
+            setLabelUsernameWindows();
+
+
+        }
+
+        private void setLabelUsernameWindows()
+        {
+            lblTop.Content = "Name: " + Environment.UserName;
         }
     }
 }

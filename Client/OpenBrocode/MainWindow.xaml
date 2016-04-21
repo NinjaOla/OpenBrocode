@@ -17,7 +17,7 @@
 
         <StackPanel Name="stackLeft" Grid.Row="1" Grid.Column="0"/>
         <StackPanel Name="stackMid" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <StackPanel Name="stackTop" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <StackPanel Name="stackTop" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
 
 
     </Grid>
