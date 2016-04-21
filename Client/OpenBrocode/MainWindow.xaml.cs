@@ -49,8 +49,6 @@ namespace OpenBrocode
 
             TopBarUC topUcObject = new TopBarUC();
             stackTop.Children.Add(topUcObject);
-
-        
         }
     }
 }
