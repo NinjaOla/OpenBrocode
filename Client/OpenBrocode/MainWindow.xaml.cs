@@ -36,11 +36,20 @@ namespace OpenBrocode
             InitializeComponent();
             //windowController.aTest.Content = "this is a test";
             //windowController.aTest.Background = Brushes.Black; 
-            this.initialLoadPanel();
+            //this.initialLoadPanel();
+            this.loadWelcomePanel();
         }
 
-        private void initialLoadPanel()
+        public void loadWelcomePanel()
         {
+            stackMid.Children.Clear();
+            WelcomeUC welUcObject = new WelcomeUC();
+            stackMid.Children.Add(welUcObject);
+        }
+
+        public void initialLoadPanel()
+        {
+            stackMid.Children.Clear();
             LeftSideBarUC leftUcObject = new LeftSideBarUC();
             stackLeft.Children.Add(leftUcObject);
 
