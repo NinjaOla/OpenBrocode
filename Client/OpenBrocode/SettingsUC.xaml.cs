@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace OpenBrocode
 {
@@ -24,5 +26,16 @@ namespace OpenBrocode
         {
             InitializeComponent();
         }
+
+
+        public void loadedSettings()
+        {
+
+
+
+        }
+
+
+
     }
 }
