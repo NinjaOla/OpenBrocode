@@ -29,6 +29,10 @@ namespace OpenBrocode
         public String twitPW { get; set; }
         public Boolean twitCHK { get; set; }
 
+
+        //user
+        public String filepath { get; set; }
+
         
 
     }

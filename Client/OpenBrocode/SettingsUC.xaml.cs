@@ -22,6 +22,7 @@ namespace OpenBrocode
     /// </summary>
     public partial class SettingsUC : UserControl
     {
+
         public SettingsUC()
         {
             InitializeComponent();
