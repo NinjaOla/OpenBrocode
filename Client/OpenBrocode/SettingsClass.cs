@@ -9,6 +9,7 @@ namespace OpenBrocode
     class SettingsClass
     {
 
+        //Why a class for this? Very easy to work with json.
 
         //The sections we have now/soon
         //The checkers are to check if the user have them enabled. If not they should not show up on the side menu (LeftSideBarUC)

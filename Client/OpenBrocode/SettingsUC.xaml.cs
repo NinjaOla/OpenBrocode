@@ -31,7 +31,11 @@ namespace OpenBrocode
         public void loadedSettings()
         {
 
+            //plan is to read from the json file what settings the user have and then apply them to the UI (if they use twitter module forexample)
 
+            //read from file - set settings 
+
+            //when close - read from settings - set file
 
         }
 
