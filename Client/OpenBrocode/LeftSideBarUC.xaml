@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="OpenBrocode.LeftSideBarUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OpenBrocode"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="80">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button Content="Home" Name="_btnHome" Margin="5,5" Click="_btnHome_Click" MinHeight="25" MinWidth="65" />
+            <Button Content="Facebook" Name="_btnFacebook" Margin="5,5" Click="_btnFacebook_Click" MinHeight="25" MinWidth="65" />
+            <Button Content="Mail" Name="_btnMail" Margin="5,5" Click="_btnMail_Click" MinHeight="25" MinWidth="65" />
+            <Button Content="Twitter" Name="_btnTwitter" Margin="5,5" Click="_btnTwitter_Click" MinHeight="25" MinWidth="65" />
+        </StackPanel>
+    </Grid>
+    
+</UserControl>

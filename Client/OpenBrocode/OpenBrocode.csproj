@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -53,6 +54,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FacebookUC.xaml.cs">
+      <DependentUpon>FacebookUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeViewUC.xaml.cs">
+      <DependentUpon>HomeViewUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MailUC.xaml.cs">
+      <DependentUpon>MailUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsUC.xaml.cs">
+      <DependentUpon>SettingsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TopBarUC.xaml.cs">
+      <DependentUpon>TopBarUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterUC.xaml.cs">
+      <DependentUpon>TwitterUC.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FacebookUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeViewUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LeftSideBarUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MailUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -61,10 +96,25 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="LeftSideBarUC.xaml.cs">
+      <DependentUpon>LeftSideBarUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SettingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TopBarUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TwitterUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -92,6 +142,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Nyan_cat_animation_new.gif" />
+    <Content Include="Resources\Nyan_cat_animation_new.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

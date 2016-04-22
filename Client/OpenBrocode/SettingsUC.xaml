@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="OpenBrocode.SettingsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OpenBrocode"
+             mc:Ignorable="d" Height="348.046" Width="326.891">
+    <Grid>
+        <CheckBox x:Name="chkBoxFace" Content="Facebook" HorizontalAlignment="Left" Margin="6,109,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkBoxMail" Content="Mail" HorizontalAlignment="Left" Margin="6,195,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkBoxTwit" Content="Twitter" HorizontalAlignment="Left" Margin="6,292,0,0" VerticalAlignment="Top"/>
+
+        <PasswordBox x:Name="pwBoxFace" HorizontalAlignment="Left" Margin="89,126,0,0" VerticalAlignment="Top" Width="161"/>
+        <PasswordBox x:Name="pwBoxMail" HorizontalAlignment="Left" Margin="89,213,0,0" VerticalAlignment="Top" Width="161"/>
+        <PasswordBox x:Name="pwBoxTwit" HorizontalAlignment="Left" Margin="89,309,0,0" VerticalAlignment="Top" Width="161"/>
+
+        <TextBox x:Name="textBoxFace" HorizontalAlignment="Left" Height="19" Margin="89,95,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="textBoxMail" HorizontalAlignment="Left" Height="19" Margin="89,181,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="textBoxTwit" HorizontalAlignment="Left" Height="19" Margin="89,278,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
+    </Grid>
+</UserControl>

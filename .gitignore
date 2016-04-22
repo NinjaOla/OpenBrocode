@@ -166,11 +166,17 @@ rcf/
 # Microsoft Azure ApplicationInsights config file
 ApplicationInsights.config
 
+<<<<<<< HEAD
+# Windows Store app package directory
+AppPackages/
+BundleArtifacts/
+=======
 # Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
 Package.StoreAssociation.xml
 _pkginfo.txt
+>>>>>>> development
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
@@ -239,9 +245,16 @@ _Pvt_Extensions
 # Paket dependency manager
 .paket/paket.exe
 
+#adding the v12.suo 
+*.v12.suo
+
+# FAKE - F# Make
+.fake/
+=======
 # FAKE - F# Make
 .fake/
 
 # JetBrains Rider
 .idea/
 *.sln.iml
+
