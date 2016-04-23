@@ -33,7 +33,11 @@ namespace OpenBrocode
         //user
         public String filepath { get; set; }
 
-        
+        public bool fileExcist()
+        {
+
+            return true;
+        }
 
     }
 }
