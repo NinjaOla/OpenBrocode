@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tweetinvi;
 using Tweetinvi.Core.Authentication;
+using Tweetinvi.Core.Interfaces;
 
 namespace Twitter
 {
@@ -20,11 +21,29 @@ namespace Twitter
         private ITwitterCredentials userCredentials;
 
         public event EventHandler loginEventHandler;
-        
+
+        private IAuthenticatedUser user;
+        public IAuthenticatedUser User
+        {
+            get
+            {
+                return this.user;
+            }
+            set
+            {
+                this.user = value;
+            }
+        }
+
 
         public Twitter()
         {
             
+        }
+
+        public ITweet publishTweet(string text)
+        {
+            return Tweet.PublishTweet(text);
         }
 
         public void authenticateApp()
@@ -51,13 +70,13 @@ namespace Twitter
                 Auth.SetCredentials(this.userCredentials);
 
                 // Get the AuthenticatedUser from the current thread credentials
-                var authenticatedUser = User.GetAuthenticatedUser();
+                this.User = Tweetinvi.User.GetAuthenticatedUser();
 
                 // Stores the usercredentials for later use
                 this.storeUserCredentials(this.userCredentials.AccessToken, this.userCredentials.AccessTokenSecret);
 
                 // Gives feedback that the user is authenticated
-                Console.WriteLine("Authenticated user: " + authenticatedUser);
+                Console.WriteLine("Authenticated user: " + this.User);
             }
         }
 
@@ -65,6 +84,26 @@ namespace Twitter
         {
             EventHandler handler = this.loginEventHandler;
             handler(this, e);
+        }
+
+        public string getUserAccessToken()
+        {
+            return userAccessToken;
+        }
+
+        public string getUserAccessTokenSecret()
+        {
+            return userAccessTokenSecret;
+        }
+
+        public string getConsumerKey()
+        {
+            return ConsumerKey;
+        }
+
+        public string getConsumerSecret()
+        {
+            return ConsumerSecret;
         }
 
         private void storeUserCredentials(string accessToken, string accessTokenSecret)
