@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace OpenBrocode
 {
@@ -11,32 +13,38 @@ namespace OpenBrocode
 
         //Why a class for this? Very easy to work with json.
 
+
         //The sections we have now/soon
         //The checkers are to check if the user have them enabled. If not they should not show up on the side menu (LeftSideBarUC)
 
         //facebook
-        public String faceUN { get; set; }
-        public String facePW { get; set; }
-        public Boolean faceCHK;
+        public String FaceUN { get; set; }
+        public String FacePW { get; set; }
+        public Boolean FaceCHK { get; set; }
 
         //mail
-        public String mailUN { get; set; }
-        public String mailPW { get; set; }
-        public Boolean mailCHK;
+        public String MailUN { get; set; }
+        public String MailPW { get; set; }
+        public Boolean mailCHK { get; set; }
 
         //twitter
-        public String twitUN { get; set; }
-        public String twitPW { get; set; }
-        public Boolean twitCHK { get; set; }
+        public String TwitUN { get; set; }
+        public String TwitPW { get; set; }
+        public Boolean TwitCHK { get; set; }
 
 
         //user
-        public String filepath { get; set; }
+        public String Filepath { get; set; }
 
+
+        //Checks if the settingsfile excist at the location
         public bool fileExcist()
         {
+            Filepath = "C:/windows/settings.json";
 
-            return true;
+
+            return (File.Exists(Filepath));
+
         }
 
     }
