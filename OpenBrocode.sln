@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBrocode", "OpenBrocode\OpenBrocode.csproj", "{CAD1A645-1AF5-49A0-821F-CD35839848C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook", "Facebook\Facebook.csproj", "{3E313564-9973-4EB6-902E-3F87C342BDAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook Test", "Facebook Test\Facebook Test.csproj", "{65CE00D6-09C4-4A7C-BA79-7F407BF3EDCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CAD1A645-1AF5-49A0-821F-CD35839848C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAD1A645-1AF5-49A0-821F-CD35839848C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAD1A645-1AF5-49A0-821F-CD35839848C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E313564-9973-4EB6-902E-3F87C342BDAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E313564-9973-4EB6-902E-3F87C342BDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E313564-9973-4EB6-902E-3F87C342BDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E313564-9973-4EB6-902E-3F87C342BDAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CE00D6-09C4-4A7C-BA79-7F407BF3EDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CE00D6-09C4-4A7C-BA79-7F407BF3EDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CE00D6-09C4-4A7C-BA79-7F407BF3EDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CE00D6-09C4-4A7C-BA79-7F407BF3EDCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
