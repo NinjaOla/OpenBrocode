@@ -61,6 +61,9 @@
     <Compile Include="FacebookUC.xaml.cs">
       <DependentUpon>FacebookUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ForgotPasswordUC.xaml.cs">
+      <DependentUpon>ForgotPasswordUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomeViewUC.xaml.cs">
       <DependentUpon>HomeViewUC.xaml</DependentUpon>
     </Compile>
@@ -77,7 +80,14 @@
     <Compile Include="TwitterUC.xaml.cs">
       <DependentUpon>TwitterUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WelcomeUC.xaml.cs">
+      <DependentUpon>WelcomeUC.xaml</DependentUpon>
+    </Compile>
     <Page Include="FacebookUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForgotPasswordUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TwitterUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WelcomeUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
