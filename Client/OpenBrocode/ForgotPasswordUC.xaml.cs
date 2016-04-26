@@ -35,6 +35,7 @@ namespace OpenBrocode
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             //If the user cancels, return back to the login screen
+            //Will be cancelled either if the user clicks cancel or presses the escape key
             MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
             mwObj.loadWelcomePanel();
         }
