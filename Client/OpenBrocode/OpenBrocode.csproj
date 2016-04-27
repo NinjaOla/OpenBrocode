@@ -70,7 +70,6 @@
     <Compile Include="MailUC.xaml.cs">
       <DependentUpon>MailUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SettingsClass.cs" />
     <Compile Include="SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
@@ -169,6 +168,12 @@
   <ItemGroup>
     <Resource Include="Nyan_cat_animation_new.gif" />
     <Content Include="Resources\Nyan_cat_animation_new.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenBrocode.JSON\OpenBrocode.JSON.csproj">
+      <Project>{44a6fa53-f337-4511-adf6-a0454966464b}</Project>
+      <Name>OpenBrocode.JSON</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

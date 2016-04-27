@@ -14,8 +14,10 @@
         <PasswordBox x:Name="pwBoxMail" HorizontalAlignment="Left" Margin="121,188,0,0" VerticalAlignment="Top" Width="161"/>
         <PasswordBox x:Name="pwBoxTwit" HorizontalAlignment="Left" Margin="121,284,0,0" VerticalAlignment="Top" Width="161"/>
 
-        <TextBox x:Name="textBoxFace" HorizontalAlignment="Left" Height="19" Margin="121,70,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
-        <TextBox x:Name="textBoxMail" HorizontalAlignment="Left" Height="19" Margin="121,156,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
-        <TextBox x:Name="textBoxTwit" HorizontalAlignment="Left" Height="19" Margin="121,253,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="txtBoxFace" HorizontalAlignment="Left" Height="19" Margin="121,70,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="txtBoxMail" HorizontalAlignment="Left" Height="19" Margin="121,156,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="txtBoxTwit" HorizontalAlignment="Left" Height="19" Margin="121,253,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
+        <Button x:Name="button" Content="Write to file test" HorizontalAlignment="Left" Margin="38,315,0,0" VerticalAlignment="Top" Width="154" Height="23" Click="buttonclick"/>
+        <Button x:Name="button1" Content="GetfromFileTest" HorizontalAlignment="Left" Margin="197,315,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="button2click"/>
     </Grid>
 </UserControl>

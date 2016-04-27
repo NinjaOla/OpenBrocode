@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
-using Newtonsoft.Json;
+using OpenBrocode.JSON;
 
 namespace OpenBrocode
 {
@@ -40,7 +40,44 @@ namespace OpenBrocode
 
         }
 
+        public void createJSONfile()
+        {
+            JsonHandler handler = new JsonHandler();
 
+            handler.objectToJson(txtBoxFace.Text, pwBoxFace.Password, (bool)chkBoxFace.IsChecked,
+                 txtBoxMail.Text, pwBoxMail.Password, (bool)chkBoxMail.IsChecked,
+                 txtBoxTwit.Text, pwBoxTwit.Password, (bool)chkBoxTwit.IsChecked);
+        }
 
+        private void buttonclick(object sender, RoutedEventArgs e)
+        {
+            createJSONfile();
+        }
+
+        private void loadToUI()
+        {
+
+            JsonHandler handler = new JsonHandler();
+            SettingsClass sc = handler.getSettings();
+
+            //facebook
+            txtBoxFace.Text = sc.FaceUN;
+            pwBoxFace.Password = sc.FacePW;
+            if (sc.FaceCHK == true) chkBoxFace.IsChecked=true;
+            //mail
+            txtBoxMail.Text = sc.MailUN;
+            pwBoxMail.Password = sc.MailPW;
+            if (sc.mailCHK == true) chkBoxMail.IsChecked = true;
+            //twitter
+            txtBoxTwit.Text = sc.TwitUN;
+            pwBoxTwit.Password = sc.TwitPW;
+            if (sc.TwitCHK == true) chkBoxTwit.IsChecked = true;
+            
+        }
+
+        private void button2click(object sender, RoutedEventArgs e)
+        {
+            loadToUI();
+        }
     }
 }
