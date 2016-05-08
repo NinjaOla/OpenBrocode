@@ -11,22 +11,22 @@ namespace Server_MVC
         public static IEnumerable<Client> Get()
         {
             return new[]
-        {
-            new Client 
             {
-                Enabled = true,
-                ClientName = "MVC Client",
-                ClientId = Config.clientId,
-                Flow = Flows.Implicit,
-
-                RedirectUris = new List<string>
+                new Client 
                 {
-                    Config.host 
-                },
+                    Enabled = true,
+                    ClientName = "MVC Client",
+                    ClientId = Config.clientId,
+                    Flow = Flows.Implicit,
+
+                    RedirectUris = new List<string>
+                    {
+                        Config.host 
+                    },
                 
-                AllowAccessToAllScopes = true
-            }
-        };
+                    AllowAccessToAllScopes = true
+                }
+            };
         }
     }
 }
