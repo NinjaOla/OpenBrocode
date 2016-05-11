@@ -1,0 +1,37 @@
+# Visual Studio Ignores
+[Bb]in/
+obj/
+
+*.userprefs
+*.suo
+*.user
+*.pidb
+*.ncb
+
+# Resharper Ignores
+_ReSharper.*/
+*.resharper.user
+
+# Ignore TypeMock TestLint Cache
+lint.db
+
+# vim Ignore
+*.swp
+
+# kdiff3 Ignore
+*.orig
+
+# Misc Ignores
+Thumbs.db
+!libs/*/[Bb]in/
+
+# StyleCop Cache ignores
+*StyleCop.Cache
+
+*.MDF
+*.ldf
+
+.vs10x
+*.vs10x
+
+dist/
