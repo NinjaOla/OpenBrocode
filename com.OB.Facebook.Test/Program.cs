@@ -11,8 +11,11 @@ namespace com.OB.Facebook.Test
     {
         static void Main(string[] args)
         {
-            OB_Facebook facebook = new OB_Facebook(); 
 
+            Facebook facebook = new Facebook();
+
+
+            Console.ReadLine(); 
         }
     }
 }

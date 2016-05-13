@@ -39,14 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OB_Facebook.cs" />
+    <Compile Include="Parameters\Parameter.cs" />
+    <Compile Include="FacebookSettings.cs" />
+    <Compile Include="Facebook.cs" />
+    <Compile Include="Exceptions\FacebookSettingsException.cs" />
+    <Compile Include="Parameters\Scope.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FacebookSharp\src\FacebookSharp.Core\FacebookSharp.Core.csproj">
-      <Project>{4e7e4294-219e-457a-b092-d1283a7b28be}</Project>
-      <Name>FacebookSharp.Core</Name>
-    </ProjectReference>
+    <Compile Include="Parameters\Premissions\PublicProfile.cs" />
+    <Compile Include="Parameters\ResponseType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
