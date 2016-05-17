@@ -5,13 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace com.OB.Facebook
 {
+
     /// <summary>
     /// Using FacebookSharp : https://github.com/prabirshrestha/FacebookSharp
     /// </summary>
     public class Facebook
     {
+
 
         private readonly string client_id = "284489194896438";
 
@@ -27,7 +30,12 @@ namespace com.OB.Facebook
         public Facebook()
         {
 
-            /*FacebookSettings settings = new FacebookSettings
+            VersionManager manager = new VersionManager(); 
+
+            
+
+
+            FacebookSettings settings = new FacebookSettings
             {
                 ClientId = this.client_id,
                 RedirectUri = this.redirect_uri, 
@@ -35,9 +43,8 @@ namespace com.OB.Facebook
                 {
                     premissions = com.OB.Facebook.Parameters.Premissions.PremissionList.getAllRigts() 
                 }
-            };*/
+            };
 
-            VersionManager mananger = new VersionManager();
 
             //Console.WriteLine(settings.getConnectionUrl());
         }

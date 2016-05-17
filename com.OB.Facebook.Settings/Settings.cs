@@ -11,9 +11,21 @@ namespace com.OB.Facebook.Settings
     public class FacebookSettings
     {
 
-        private static string settingsName = "settings.txt";
+        private static string settingName = "settings.txt";
 
-        private static SettingsTemplate template = null; 
+        private static SettingsTemplate settingTemple; 
+
+        private static string SettingPath
+        {
+            get 
+            {
+                return dir + "\\" + settingName; 
+            }
+            set 
+            {
+                settingName = value; 
+            }
+        }
 
         private static string dir
         {
@@ -23,55 +35,42 @@ namespace com.OB.Facebook.Settings
             }
         }
 
+        public FacebookSettings()
+        {
+
+        }
+
         /// <summary>
         /// Used to load the settings file. 
         /// Populates on if it does not exists. 
         /// </summary>
         /// <returns></returns>
-        public static SettingsTemplate loadSettings()
+        public static SettingsTemplate load()
         {
-
-            //SettingsTemplate template = new SettingsTemplate(); 
-
-            if (Directory.Exists(dir + settingsName))
+            if (File.Exists(SettingPath))
             {
-                template = JsonConvert.DeserializeObject<SettingsTemplate>(File.ReadAllText(dir + settingsName));
-
+                settingTemple = JsonConvert.DeserializeObject<SettingsTemplate>(File.ReadAllText(SettingPath));
             }
             else
-                createSettings();
+                createSettings(); 
 
-
-            return template; 
-
- 
+            return settingTemple;
         }
 
         public static void createSettings(string settingsName = null, SettingsTemplate template = null)
         {
-            if (String.IsNullOrEmpty(settingsName))
-                settingsName = FacebookSettings.settingsName; 
-            
+            if (!String.IsNullOrEmpty(settingsName))
+                SettingPath = settingName;
 
+
+            settingTemple = new SettingsTemplate(); 
+
+            string value = JsonConvert.SerializeObject(settingTemple); 
+
+            System.IO.File.WriteAllText(SettingPath, value);
         }
 
 
-        public static SettingsTemplate getTemplateFromJsonString(string jsonContent)
-        {
-            List<SettingsTemplate> template = JsonConvert.DeserializeObject<List<SettingsTemplate>>(jsonContent, new JsonSerializerSettings
-            {
-                DefaultValueHandling = DefaultValueHandling.Populate, 
-                NullValueHandling = NullValueHandling.Include
-            });
-
-            if (template.Count > 1)
-            {
-                throw new Exception("Found more objects in the template than expected");
-            }
-
-            return template.First(); 
-
-        }
 
     }
 }

@@ -68,6 +68,7 @@
     <ProjectReference Include="..\com.OB.Facebook.Version.2_7\com.OB.Facebook.Version.2_7.csproj">
       <Project>{8e7510dd-8224-4fe4-a794-eb51c3677779}</Project>
       <Name>com.OB.Facebook.Version.2_7</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
