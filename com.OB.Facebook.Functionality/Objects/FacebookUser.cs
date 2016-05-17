@@ -1,15 +1,15 @@
-﻿using System;
+﻿using com.OB.Facebook.Interfaces;
+using com.OB.Facebook.Interfaces.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace com.OB.Facebook.Parameters.Premissions
+namespace com.OB.Facebook.Functionality.Objects
 {
-    class PublicProfile
+    public class FacebookUser : IFacebookUser
     {
-        private static readonly string public_profile = "public_profile";
-
         public string Id { get; set; }
 
         public string Name { get; set; }
@@ -34,12 +34,12 @@ namespace com.OB.Facebook.Parameters.Premissions
 
         public string Verified { get; set; }
 
-        private PublicProfile()
+        private FacebookUser()
         {
 
         }
 
-        public PublicProfile(PublicProfile publicProfile)
+        public FacebookUser(FacebookUser publicProfile)
         {
             if (publicProfile == null)
                 throw new NullReferenceException("Public profile cannot be null");
@@ -68,12 +68,5 @@ namespace com.OB.Facebook.Parameters.Premissions
 
             this.Verified = publicProfile.Verified; 
         }
-
-
-        public static string ToString()
-        {
-            return public_profile; 
-        }
-
     }
 }

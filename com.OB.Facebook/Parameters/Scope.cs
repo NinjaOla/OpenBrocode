@@ -1,4 +1,6 @@
-﻿using System;
+﻿using com.OB.Facebook.Functionality.Exceptions;
+using com.OB.Facebook.Parameters.Premissions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +13,11 @@ namespace com.OB.Facebook.Parameters
     {
         public readonly string identifier = Parameter.Scope;
 
-        private ArrayList list = new ArrayList();
-
-        public Boolean PublicProfile = false;
-
-        public Boolean All = false; 
+        /// <summary>
+        /// Look at Paramters.Premssions.PremissionList where there is a dictionary of all rights that is valid. 
+        /// If you want the premissions set the value to true. 
+        /// </summary>
+        public Dictionary<String, Boolean> premissions = new Dictionary<String, Boolean>(); 
 
         public Scope()
         {
@@ -27,9 +29,17 @@ namespace com.OB.Facebook.Parameters
             if (scope == null)
                 throw new NullReferenceException("Scope cannot be null");
 
-            this.All = scope.All; 
+            foreach(KeyValuePair<String, Boolean> entry in scope.premissions)
+            {
+                if (entry.Value == true && PremissionList.inPremissionList(entry.Key))
+                    this.premissions[entry.Key] = entry.Value; 
+            }
 
-            this.PublicProfile = scope.PublicProfile; 
+            if(this.premissions.Count == 0)
+            {
+                throw new FacebookException("There have to be some premissions set to true");
+            }
+
 
         }
 
@@ -38,20 +48,12 @@ namespace com.OB.Facebook.Parameters
 
             string temp = ""; 
 
-            if(this.All)
+            foreach(KeyValuePair<String, Boolean> entry in this.premissions)
             {
-                temp += com.OB.Facebook.Parameters.Premissions.PublicProfile.ToString() + ",";
-            }
-            else
-            {
-
-                if(this.PublicProfile)
-                {
-                    temp += com.OB.Facebook.Parameters.Premissions.PublicProfile.ToString() + ","; 
-                }
+                temp += entry.Key + ","; 
             }
 
-            temp = temp.TrimEnd(',');
+            temp = temp.TrimEnd(','); 
 
 
             if (String.IsNullOrEmpty(temp))

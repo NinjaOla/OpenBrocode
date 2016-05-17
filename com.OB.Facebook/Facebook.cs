@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 
 namespace com.OB.Facebook
 {
@@ -13,7 +13,7 @@ namespace com.OB.Facebook
     public class Facebook
     {
 
-        private readonly string client_id = "1745949208958643";
+        private readonly string client_id = "284489194896438";
 
         private readonly string client_secret = "fc3e44196201e09b73b28d0c4c169864";
 
@@ -24,20 +24,22 @@ namespace com.OB.Facebook
         private Uri _loginUri; 
 
 
-
         public Facebook()
         {
 
-            FacebookSettings settings = new FacebookSettings
+            /*FacebookSettings settings = new FacebookSettings
             {
                 ClientId = this.client_id,
+                RedirectUri = this.redirect_uri, 
                 Scope = new com.OB.Facebook.Parameters.Scope
                 {
-                    All = true
+                    premissions = com.OB.Facebook.Parameters.Premissions.PremissionList.getAllRigts() 
                 }
-            };
+            };*/
 
-            Console.WriteLine(settings.getConnectionUrl());
+            VersionManager mananger = new VersionManager();
+
+            //Console.WriteLine(settings.getConnectionUrl());
         }
 
 

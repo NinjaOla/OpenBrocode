@@ -1,4 +1,4 @@
-﻿using com.OB.Facebook.Exceptions;
+﻿using com.OB.Facebook.Functionality.Exceptions; 
 using com.OB.Facebook.Parameters;
 using System;
 using System.Collections.Generic;
@@ -51,12 +51,17 @@ namespace com.OB.Facebook
         /// <summary>
         /// Set a response type 
         /// Look a com.OB.Facebook.Paramters.ResonseType for valid responses. 
+        /// token. Response data is included as a URL fragment and contains an access token. Desktop apps must use this setting for response_type. This is most useful when the client will be handling the token. 
+        /// Use the other response types at your own risk. 
         /// </summary>
         public string ResponseType
         {
             get
             {
-                return this.responseType; 
+                if (this.responseType == null)
+                    return com.OB.Facebook.Parameters.ResponseType.token; 
+                else
+                    return this.responseType; 
             }
             set
             {
@@ -75,7 +80,7 @@ namespace com.OB.Facebook
                         this.responseType = value;
                         break; 
                     default:
-                        throw new Exception("Not a valid response type"); 
+                        throw new Exception("Not a valid token type"); 
                 }
                 this.responseType = null; 
             }

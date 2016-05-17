@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace com.OB.Facebook.Exceptions
+namespace com.OB.Facebook.Functionality.Exceptions
 {
-    internal class FacebookSettingsException : Exception
+    public class FacebookSettingsException : Exception
     {
         public FacebookSettingsException() : base("Facebook settings exception")
         {
