@@ -15,12 +15,13 @@ namespace OpenBrocode.JSON
         public JsonHandler()
         {
             settings = new SettingsClass();
+            this.settings.Filepath = "SettingsJson.json";
         }
 
         private void objectFromJSON()
         {
             // strings the json file
-            string jsonString = File.ReadAllText("SettingsJson.json");
+            string jsonString = File.ReadAllText(settings.Filepath);
             //Converts it to an object from Settings class
 
             this.settings = JsonConvert.DeserializeObject<SettingsClass>(jsonString);
@@ -54,8 +55,9 @@ namespace OpenBrocode.JSON
             this.settings.TwitPW = pTwitPW;
             this.settings.TwitCHK = pTwitCHK;
 
+
             string jsonToFile = JsonConvert.SerializeObject(settings);
-            File.WriteAllText("SettingsJson.json", jsonToFile);
+            File.WriteAllText(settings.Filepath, jsonToFile);
            
             
         }

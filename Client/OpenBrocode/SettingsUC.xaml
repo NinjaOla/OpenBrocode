@@ -6,18 +6,16 @@
              xmlns:local="clr-namespace:OpenBrocode"
              mc:Ignorable="d" Height="348.046" Width="326.891">
     <Grid>
-        <CheckBox x:Name="chkBoxFace" Content="Facebook" HorizontalAlignment="Left" Margin="38,84,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chkBoxMail" Content="Mail" HorizontalAlignment="Left" Margin="38,170,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chkBoxTwit" Content="Twitter" HorizontalAlignment="Left" Margin="38,267,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkBoxFace" Content="Facebook" HorizontalAlignment="Left" Margin="38,84,0,0" VerticalAlignment="Top" Click="chkFCLICK"/>
+        <CheckBox x:Name="chkBoxMail" Content="Mail" HorizontalAlignment="Left" Margin="38,170,0,0" VerticalAlignment="Top" Click="chkMCLICK"/>
+        <CheckBox x:Name="chkBoxTwit" Content="Twitter" HorizontalAlignment="Left" Margin="38,267,0,0" VerticalAlignment="Top" Click="chkTwitCLICK"/>
 
-        <PasswordBox x:Name="pwBoxFace" HorizontalAlignment="Left" Margin="121,101,0,0" VerticalAlignment="Top" Width="161"/>
-        <PasswordBox x:Name="pwBoxMail" HorizontalAlignment="Left" Margin="121,188,0,0" VerticalAlignment="Top" Width="161"/>
-        <PasswordBox x:Name="pwBoxTwit" HorizontalAlignment="Left" Margin="121,284,0,0" VerticalAlignment="Top" Width="161"/>
+        <PasswordBox x:Name="pwBoxFace" HorizontalAlignment="Left" Margin="121,101,0,0" VerticalAlignment="Top" Width="161" KeyUp="facePKEYUP"/>
+        <PasswordBox x:Name="pwBoxMail" HorizontalAlignment="Left" Margin="121,188,0,0" VerticalAlignment="Top" Width="161" KeyUp="mailPKEYUP"/>
+        <PasswordBox x:Name="pwBoxTwit" HorizontalAlignment="Left" Margin="121,284,0,0" VerticalAlignment="Top" Width="161" KeyUp="twitPKEYUP"/>
 
-        <TextBox x:Name="txtBoxFace" HorizontalAlignment="Left" Height="19" Margin="121,70,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
-        <TextBox x:Name="txtBoxMail" HorizontalAlignment="Left" Height="19" Margin="121,156,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
-        <TextBox x:Name="txtBoxTwit" HorizontalAlignment="Left" Height="19" Margin="121,253,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161"/>
-        <Button x:Name="button" Content="Write to file test" HorizontalAlignment="Left" Margin="38,315,0,0" VerticalAlignment="Top" Width="154" Height="23" Click="buttonclick"/>
-        <Button x:Name="button1" Content="GetfromFileTest" HorizontalAlignment="Left" Margin="197,315,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="button2click"/>
+        <TextBox x:Name="txtBoxFace" HorizontalAlignment="Left" Height="19" Margin="121,70,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161" KeyUp="faceUKEYUP"/>
+        <TextBox x:Name="txtBoxMail" HorizontalAlignment="Left" Height="19" Margin="121,156,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161" KeyUp="mailUKEYUP"/>
+        <TextBox x:Name="txtBoxTwit" HorizontalAlignment="Left" Height="19" Margin="121,253,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161" KeyUp="twituKEYUP"/>
     </Grid>
 </UserControl>

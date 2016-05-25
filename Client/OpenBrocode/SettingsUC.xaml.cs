@@ -26,21 +26,15 @@ namespace OpenBrocode
         public SettingsUC()
         {
             InitializeComponent();
-        }
+            loadToUI();
 
 
-        public void loadedSettings()
-        {
-
-            //plan is to read from the json file what settings the user have and then apply them to the UI (if they use twitter module forexample)
-
-            //read from file - set settings 
-
-            //when close - read from settings - set file
 
         }
 
-        public void createJSONfile()
+
+
+        public void saveToFile()
         {
             JsonHandler handler = new JsonHandler();
 
@@ -49,10 +43,7 @@ namespace OpenBrocode
                  txtBoxTwit.Text, pwBoxTwit.Password, (bool)chkBoxTwit.IsChecked);
         }
 
-        private void buttonclick(object sender, RoutedEventArgs e)
-        {
-            createJSONfile();
-        }
+
 
         private void loadToUI()
         {
@@ -75,9 +66,50 @@ namespace OpenBrocode
             
         }
 
-        private void button2click(object sender, RoutedEventArgs e)
+        private void faceUKEYUP(object sender, KeyEventArgs e)
         {
-            loadToUI();
+            saveToFile();
+        }
+
+        private void facePKEYUP(object sender, KeyEventArgs e)
+        {
+            saveToFile();
+        }
+
+        private void chkFCLICK(object sender, RoutedEventArgs e)
+        {
+            saveToFile();
+        }
+
+        private void mailUKEYUP(object sender, KeyEventArgs e)
+        {
+            saveToFile();
+        }
+
+        private void mailPKEYUP(object sender, KeyEventArgs e)
+        {
+            saveToFile();
+        }
+
+
+        private void chkMCLICK(object sender, RoutedEventArgs e)
+        {
+            saveToFile();
+        }
+
+        private void twituKEYUP(object sender, KeyEventArgs e)
+        {
+            saveToFile();
+        }
+
+        private void twitPKEYUP(object sender, KeyEventArgs e)
+        {
+            saveToFile();
+        }
+
+        private void chkTwitCLICK(object sender, RoutedEventArgs e)
+        {
+            saveToFile();
         }
     }
 }
