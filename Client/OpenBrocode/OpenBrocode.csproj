@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -57,6 +61,9 @@
     <Compile Include="FacebookUC.xaml.cs">
       <DependentUpon>FacebookUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ForgotPasswordUC.xaml.cs">
+      <DependentUpon>ForgotPasswordUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomeViewUC.xaml.cs">
       <DependentUpon>HomeViewUC.xaml</DependentUpon>
     </Compile>
@@ -72,7 +79,14 @@
     <Compile Include="TwitterUC.xaml.cs">
       <DependentUpon>TwitterUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WelcomeUC.xaml.cs">
+      <DependentUpon>WelcomeUC.xaml</DependentUpon>
+    </Compile>
     <Page Include="FacebookUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForgotPasswordUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,6 +129,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WelcomeUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -134,6 +152,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,6 +168,12 @@
   <ItemGroup>
     <Resource Include="Nyan_cat_animation_new.gif" />
     <Content Include="Resources\Nyan_cat_animation_new.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenBrocode.JSON\OpenBrocode.JSON.csproj">
+      <Project>{44a6fa53-f337-4511-adf6-a0454966464b}</Project>
+      <Name>OpenBrocode.JSON</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
