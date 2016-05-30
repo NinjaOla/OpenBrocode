@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBrocode", "OpenBrocode\OpenBrocode.csproj", "{CAD1A645-1AF5-49A0-821F-CD35839848C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sendMail", "ClassLibrary1\sendMail.csproj", "{29930431-D558-47ED-ACC8-7BDC5AE00A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mailTests", "mailTests\mailTests.csproj", "{B77384D6-C606-447F-BF01-8E3530EE7613}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CAD1A645-1AF5-49A0-821F-CD35839848C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAD1A645-1AF5-49A0-821F-CD35839848C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAD1A645-1AF5-49A0-821F-CD35839848C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29930431-D558-47ED-ACC8-7BDC5AE00A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29930431-D558-47ED-ACC8-7BDC5AE00A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29930431-D558-47ED-ACC8-7BDC5AE00A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29930431-D558-47ED-ACC8-7BDC5AE00A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77384D6-C606-447F-BF01-8E3530EE7613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77384D6-C606-447F-BF01-8E3530EE7613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77384D6-C606-447F-BF01-8E3530EE7613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77384D6-C606-447F-BF01-8E3530EE7613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
