@@ -35,16 +35,13 @@ namespace Twitter
             }
         }
 
+        public TwitterUser twitterUser;
 
         public Twitter()
         {
             
         }
 
-        public ITweet publishTweet(string text)
-        {
-            return Tweet.PublishTweet(text);
-        }
 
         public void authenticateApp()
         {
@@ -77,6 +74,8 @@ namespace Twitter
 
                 // Gives feedback that the user is authenticated
                 Console.WriteLine("Authenticated user: " + this.User);
+
+                this.twitterUser = new TwitterUser(this.user);
             }
         }
 
@@ -113,16 +112,5 @@ namespace Twitter
 
             OnLoginCompleted(new EventArgs());
         }
-
-        private string getAccessToken()
-        {
-            return this.userAccessToken;
-        }
-
-        private string getAccessTokenSecret()
-        {
-            return this.userAccessTokenSecret;
-        }
-
     }
 }

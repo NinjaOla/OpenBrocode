@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tweetinvi;
 using Tweetinvi.Core.Authentication;
+using Tweetinvi.Core.Exceptions;
 using Tweetinvi.Core.Interfaces;
 using Tweetinvi.Core.Interfaces.Models;
 
@@ -12,14 +13,7 @@ namespace Twitter
 {
     public class TwitterUser
     {
-        // Get the AuthenticatedUser from the current thread credentials
         private IAuthenticatedUser authenticatedUser;
-        private IEnumerable<ITweet> homeTimeline;
-        private IAccountSettings accountSettings;
-        private IEnumerable<IMessage> latestMessagesReceived;
-        private IEnumerable<IMessage> latestMessagesSent;
-        private IRelationshipDetails relationshipDetails;
-        private IEnumerable<ISavedSearch> savedSearches;
 
         public IEnumerable<ITweet> HomeTimeline
         {
@@ -32,6 +26,18 @@ namespace Twitter
         public TwitterUser(IAuthenticatedUser authenticatedUser)
         {
             this.authenticatedUser = authenticatedUser;
+        }
+
+        public ITweet publishTweet(string text)
+        {
+            return Tweet.PublishTweet(text);
+
+            IEnumerable<ITwitterException> latestException = ExceptionHandler.GetExceptions();
+
+            foreach (ITwitterException exception in latestException)
+            {
+                System.Console.WriteLine("Exception: '{0}'", exception.ToString());
+            }
         }
 
         /// <summary>
@@ -54,49 +60,66 @@ namespace Twitter
             return false;
         }
 
+        public bool deleteTweet(long tweetId)
+        {
+            Tweet.DestroyTweet(tweetId);
+            return true;
+        }
+
+        public IEnumerable<ITweet> getTweets(int maxTweets)
+        {
+            var userTimeline = new Tweetinvi.Core.Parameters.UserTimelineParameters()
+            {
+                MaximumNumberOfTweetsToRetrieve = maxTweets,
+                IncludeRTS = true
+            };
+
+            return Timeline.GetUserTimeline(this.authenticatedUser, userTimeline);
+        }
+
         public IAccountSettings getAccountSettings()
         {
-            return authenticatedUser.GetAccountSettings();
+            return this.authenticatedUser.GetAccountSettings();
         }
 
-        public void getLatestMessageReceived()
+        public IEnumerable<IMessage> getLatestMessageReceived()
         {
-            this.latestMessagesReceived = authenticatedUser.GetLatestMessagesReceived();
+            return this.authenticatedUser.GetLatestMessagesReceived();
         }
 
-        public void getLatestMessagesSent()
+        public IEnumerable<IMessage> getLatestMessagesSent()
         {
-            this.latestMessagesSent = authenticatedUser.GetLatestMessagesSent();
+            return this.authenticatedUser.GetLatestMessagesSent();
         }
         
-        public void getRelationshipDetailts(string screenName)
+        public IRelationshipDetails getRelationshipDetailts(string screenName)
         {
-            this.relationshipDetails = authenticatedUser.GetRelationshipWith(screenName);
+            return this.authenticatedUser.GetRelationshipWith(screenName);
         }
 
-        public void getSavedSearches()
+        public IEnumerable<ISavedSearch> getSavedSearches()
         {
-            this.savedSearches = authenticatedUser.GetSavedSearches();
+            return this.authenticatedUser.GetSavedSearches();
         }
 
         public void followUser(string screenName)
         {
-            authenticatedUser.FollowUser(screenName);
+            this.authenticatedUser.FollowUser(screenName);
         }
 
         public void unFollowUser(string screenName)
         {
-            authenticatedUser.UnFollowUser(screenName);
+            this.authenticatedUser.UnFollowUser(screenName);
         }
 
         public void blockUser(string userName)
         {
-            authenticatedUser.BlockUser(userName);
+            this.authenticatedUser.BlockUser(userName);
         }
 
         public void unBlockUser(string userName)
         {
-            authenticatedUser.UnBlockUser(userName);
+            this.authenticatedUser.UnBlockUser(userName);
         }
 
 

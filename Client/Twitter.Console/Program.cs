@@ -18,7 +18,14 @@ namespace Twitter.Console
             twitter.loginEventHandler += new EventHandler(loginEvent);
             twitter.authenticateApp();
 
-            
+            List<ITweet> userTimeline = twitter.twitterUser.HomeTimeline.ToList();
+            foreach(ITweet tweet in userTimeline)
+            {
+                if(tweet.Text.Equals("something"))
+                {
+                    twitter.twitterUser.deleteTweet(tweet.Id);
+                }
+            }
 
             System.Console.ReadLine();
         }
@@ -28,23 +35,13 @@ namespace Twitter.Console
             Twitter twitter = (Twitter)sender;
             Auth.SetUserCredentials(twitter.getConsumerKey(), twitter.getConsumerSecret(), twitter.getUserAccessToken(), twitter.getUserAccessTokenSecret());
             System.Console.WriteLine("Login works");
-            publishTweetTimeLine(twitter);
+            System.Console.WriteLine("Input your tweet: ");
+            twitter.twitterUser.publishTweet(System.Console.ReadLine());
         }
 
-        public static void publishTweetTimeLine(Twitter twitter)
+        public static void getUserHomeTimeline(Twitter twitter)
         {
-            TwitterUser twitterUser = new TwitterUser(twitter.User);
-            //ITweet tweetz = twitter.publishTweet("I love Tweetinvi");
-            IEnumerable<ITwitterException> latestException = ExceptionHandler.GetExceptions();
-
-            foreach(ITwitterException exception in latestException)
-            {
-                System.Console.WriteLine("Exception: '{0}'", exception.ToString());
-            }
-
-            //System.Console.WriteLine("The following error occured : '{0}'", latestException.TwitterDescription);
-
-            foreach (ITweet tweet in twitterUser.HomeTimeline)
+            foreach (ITweet tweet in twitter.twitterUser.HomeTimeline)
             {
                 System.Console.WriteLine(tweet.Text);
                 System.Console.WriteLine(tweet.CreatedBy);
