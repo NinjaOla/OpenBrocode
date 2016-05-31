@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace OpenBrocode
 {
     /// <summary>
@@ -23,6 +25,8 @@ namespace OpenBrocode
         public TwitterUC()
         {
             InitializeComponent();
+            
+            
         }
     }
 }
