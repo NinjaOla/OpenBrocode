@@ -86,6 +86,11 @@ namespace OpenBrocode.JSON
 
 
             };
+            
+            if(File.Exists(settings.Filepath))
+            {
+                File.Delete(settings.Filepath);
+            }
 
             FileStream fs = new FileStream(settings.Filepath, FileMode.CreateNew);
 

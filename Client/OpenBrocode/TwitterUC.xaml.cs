@@ -14,9 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Twitter;
 using Tweetinvi;
-
-
-
+using Tweetinvi.Core.Interfaces;
 
 namespace OpenBrocode
 {
@@ -27,12 +25,20 @@ namespace OpenBrocode
     {
 
         
+        
         public TwitterUC()
         {
             
             InitializeComponent();
+            getTweetsToList();
             
             
+        }
+
+        private void getTweetsToList()
+        {
+            List<ITweet> userTimeLine = SettingsUC.maintwitter.twitterUser.HomeTimeline.ToList();
+            listbox1.ItemsSource = userTimeLine;
         }
 
         private void sendTweetClick(object sender, RoutedEventArgs e)
