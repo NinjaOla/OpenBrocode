@@ -14,6 +14,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using OpenBrocode.JSON;
+using Twitter;
+
+
+
 
 namespace OpenBrocode
 {
@@ -23,12 +27,38 @@ namespace OpenBrocode
     public partial class SettingsUC : UserControl
     {
 
+        private MainTwitter maintwitter;
+
         public SettingsUC()
         {
+            this.maintwitter = new MainTwitter();
+            this.maintwitter.loginEventHandler += new EventHandler(loginEventHandler);
             InitializeComponent();
             loadToUI();
 
+        }
 
+        public void loginEventHandler(object sender, EventArgs e)
+        {
+            System.Console.WriteLine("Vi er framme");
+        }
+
+
+        private void btnTwitterClick(object sender, RoutedEventArgs e)
+        {
+            this.maintwitter.authenticateApp();
+            InputBox.Visibility = Visibility.Visible;
+           
+
+            //OK popupboks knapp med pin - caller på eventhandler.(popup kjører authenticateUser)->
+
+
+        }
+
+        private void YesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.maintwitter.authenticateUser(InputTextBox.Text);
+            InputBox.Visibility = Visibility.Collapsed;
 
         }
 
@@ -99,5 +129,7 @@ namespace OpenBrocode
         {
             saveToFile();
         }
+
+
     }
 }

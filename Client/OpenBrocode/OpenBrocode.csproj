@@ -175,6 +175,14 @@
       <Project>{44a6fa53-f337-4511-adf6-a0454966464b}</Project>
       <Name>OpenBrocode.JSON</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Twitter.Console\TwitterConsole.csproj">
+      <Project>{4624ad22-e243-40bc-91e8-2598e2d9e57c}</Project>
+      <Name>TwitterConsole</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twitter\Twitter.csproj">
+      <Project>{9494f2cb-6cbe-4ba5-ae80-66a1424a43bb}</Project>
+      <Name>Twitter</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

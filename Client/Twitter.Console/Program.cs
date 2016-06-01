@@ -7,8 +7,9 @@ using Tweetinvi;
 using Tweetinvi.Core.Exceptions;
 using Tweetinvi.Core.Interfaces;
 using Tweetinvi.Core.Interfaces.Models;
+using Twitter;
 
-namespace Twitter.Console
+namespace TwitterConsole
 {
     class Program
     {
