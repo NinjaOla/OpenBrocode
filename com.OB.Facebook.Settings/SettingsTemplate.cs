@@ -12,7 +12,7 @@ namespace com.OB.Facebook.Settings
     public class SettingsTemplate
     {
 
-        [JsonProperty("IgnotrMissingFilesOnVersion", DefaultValueHandling = DefaultValueHandling.Populate)]
+        [JsonProperty("IgnorMissingFilesOnVersion", DefaultValueHandling = DefaultValueHandling.Populate)]
         [DefaultValue(false)]
         public bool IgnoreMissingFilesOnVersion { get; set; }
     }

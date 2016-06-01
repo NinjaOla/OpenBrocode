@@ -32,16 +32,13 @@ namespace com.OB.Facebook
 
             VersionManager manager = new VersionManager(); 
 
-            
-
-
             FacebookSettings settings = new FacebookSettings
             {
                 ClientId = this.client_id,
                 RedirectUri = this.redirect_uri, 
                 Scope = new com.OB.Facebook.Parameters.Scope
                 {
-                    premissions = com.OB.Facebook.Parameters.Premissions.PremissionList.getAllRigts() 
+                    Premissions = com.OB.Facebook.Parameters.Premissions.PremissionList.getAllRigts() 
                 }
             };
 
