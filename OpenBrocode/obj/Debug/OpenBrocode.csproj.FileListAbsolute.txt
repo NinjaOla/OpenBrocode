@@ -1,0 +1,16 @@
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
+C:\Users\JohnMartin\Dropbox\Open-Brocode\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
+C:\Users\Kevin\Documents\GitHub\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe.config
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.exe
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\bin\Debug\OpenBrocode.pdb
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\OpenBrocode.csprojResolveAssemblyReference.cache
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\MainWindow.baml
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\MainWindow.g.cs
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\App.g.cs
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\OpenBrocode_MarkupCompile.cache
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\OpenBrocode.g.resources
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\OpenBrocode.Properties.Resources.resources
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\OpenBrocode.csproj.GenerateResource.Cache
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\OpenBrocode.exe
+C:\Users\John-Martin\Documents\GitHub\OpenBrocode\OpenBrocode\obj\Debug\OpenBrocode.pdb
