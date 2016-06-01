@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBrocode", "OpenBrocode\OpenBrocode.csproj", "{CAD1A645-1AF5-49A0-821F-CD35839848C9}"
 EndProject
@@ -29,11 +29,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mailTests", "mailTests\mail
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter", "Twitter\Twitter.csproj", "{9494F2CB-6CBE-4BA5-AE80-66A1424A43BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console", "Twitter.Console\Twitter.Console.csproj", "{4624AD22-E243-40BC-91E8-2598E2D9E57C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Test", "Twitter.Test\Twitter.Test.csproj", "{80F48EDC-67CD-4E9C-BDB3-68EB7D28BE74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sendMail", "ClassLibrary1\sendMail.csproj", "{29930431-D558-47ED-ACC8-7BDC5AE00A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterConsole", "Twitter.Console\TwitterConsole.csproj", "{4624AD22-E243-40BC-91E8-2598E2D9E57C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,10 +93,6 @@ Global
 		{9494F2CB-6CBE-4BA5-AE80-66A1424A43BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9494F2CB-6CBE-4BA5-AE80-66A1424A43BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9494F2CB-6CBE-4BA5-AE80-66A1424A43BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4624AD22-E243-40BC-91E8-2598E2D9E57C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4624AD22-E243-40BC-91E8-2598E2D9E57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4624AD22-E243-40BC-91E8-2598E2D9E57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4624AD22-E243-40BC-91E8-2598E2D9E57C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{80F48EDC-67CD-4E9C-BDB3-68EB7D28BE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80F48EDC-67CD-4E9C-BDB3-68EB7D28BE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80F48EDC-67CD-4E9C-BDB3-68EB7D28BE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -105,6 +101,10 @@ Global
 		{29930431-D558-47ED-ACC8-7BDC5AE00A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29930431-D558-47ED-ACC8-7BDC5AE00A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29930431-D558-47ED-ACC8-7BDC5AE00A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4624AD22-E243-40BC-91E8-2598E2D9E57C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4624AD22-E243-40BC-91E8-2598E2D9E57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4624AD22-E243-40BC-91E8-2598E2D9E57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4624AD22-E243-40BC-91E8-2598E2D9E57C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -105,7 +105,6 @@
     <Compile Include="MailUC.xaml.cs">
       <DependentUpon>MailUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User\UserHandler.cs" />
     <Compile Include="User\Settings.cs" />
     <Compile Include="SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
@@ -116,6 +115,7 @@
     <Compile Include="TwitterUC.xaml.cs">
       <DependentUpon>TwitterUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User\UserHandler.cs" />
     <Compile Include="User\UserObject.cs" />
     <Compile Include="WelcomeUC.xaml.cs">
       <DependentUpon>WelcomeUC.xaml</DependentUpon>
