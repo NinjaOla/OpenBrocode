@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Twitter;
 
 namespace OpenBrocode.User
 {
-    class LoginHandler
+    class UserHandler
     {
         private Dictionary<String, String> users = new Dictionary<string,string>()
         {
@@ -17,9 +18,11 @@ namespace OpenBrocode.User
             {"Bob", ""}
         };
 
+        public static MainTwitter Twitter {get; set; }
+
         private static UserObject user; 
 
-        public LoginHandler()
+        public UserHandler()
         {
 
         }
@@ -29,7 +32,10 @@ namespace OpenBrocode.User
             if(this.users.ContainsKey(username))
             {
                 if (this.users[username].Equals(password))
+                {
+                    setLoggedInUser(username, password);
                     return true; 
+                }
             }
             return false; 
 
@@ -37,26 +43,40 @@ namespace OpenBrocode.User
 
         public void setLoggedInUser(string userName, string password)
         {
-            if(LoginHandler.user != null)
+            if(UserHandler.user != null)
                 throw new UserLoggedInException();
 
-            LoginHandler.user = new UserObject
+            UserHandler.user = new UserObject
             {
                 UserName = userName,
                 Password = password,
                 settings = new Settings()
             };
+
+            if(user.settings.settings.TwitterUserToken != null && user.settings.settings.TwitterUserSecretToken != null)
+            {
+
+            }
         }
 
         public static bool logOut()
         {
-            LoginHandler.user = null;
+            UserHandler.user = null;
             return true; 
         }
 
-        public static void isUserLoggedIn()
+        public static bool isUserLoggedIn()
         {
+            if (UserHandler.user != null)
+                return true;
 
+            return false; 
         }
+
+        public static UserObject  getUser()
+        {
+            return UserHandler.user; 
+        }
+
     }
 }

@@ -24,11 +24,11 @@ namespace OpenBrocode
     {
         private string usrNameText;
 
-        private LoginHandler handler; 
+        private UserHandler handler; 
 
         public WelcomeUC()
         {
-            handler = new LoginHandler(); 
+            handler = new UserHandler(); 
             InitializeComponent();
         }
 
