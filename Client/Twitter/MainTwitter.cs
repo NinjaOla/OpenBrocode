@@ -61,8 +61,10 @@ namespace Twitter
             {
                 var userCredentials = new TwitterCredentials(this.ConsumerKey, this.ConsumerSecret, userAccessToken, userAccessTokenSecret);
                 this.User = Tweetinvi.User.GetAuthenticatedUser(userCredentials);
+
                 if(this.user != null)
                 {
+                    this.twitterUser = new TwitterUser(this.user);
                     return true;
                 }
             }

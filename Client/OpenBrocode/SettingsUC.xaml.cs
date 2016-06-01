@@ -32,9 +32,20 @@ namespace OpenBrocode
 
         public SettingsUC()
         {
-            maintwitter = new MainTwitter();
-            maintwitter.loginEventHandler += new EventHandler(loginEventHandler);
             InitializeComponent();
+
+            if (UserHandler.Twitter != null && UserHandler.Twitter.userLoggedIn())
+            {
+                chkBoxTwit.IsChecked = true;
+                _btnTwitter.IsEnabled = false;
+            }
+            else
+            {
+                UserHandler.Twitter = new MainTwitter();
+                UserHandler.Twitter.loginEventHandler += new EventHandler(loginEventHandler);
+
+            }
+
             loadToUI();
 
         }

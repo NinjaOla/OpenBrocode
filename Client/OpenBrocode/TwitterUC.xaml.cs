@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Twitter;
 using Tweetinvi;
 using Tweetinvi.Core.Interfaces;
+using OpenBrocode.User;
 
 namespace OpenBrocode
 {
@@ -24,27 +25,31 @@ namespace OpenBrocode
     public partial class TwitterUC : UserControl
     {
 
-        
-        
+
         public TwitterUC()
         {
-            
+            if(!UserHandler.Twitter.userLoggedIn())
+            {
+                WelcomeUC welUcObject = new WelcomeUC();
+                return;  
+            }
+
             InitializeComponent();
             getTweetsToList();
-            
-            
+
         }
 
         private void getTweetsToList()
         {
-            List<ITweet> userTimeLine = SettingsUC.maintwitter.twitterUser.HomeTimeline.ToList();
+
+            List<ITweet> userTimeLine = UserHandler.Twitter.twitterUser.HomeTimeline.ToList();
             listbox1.ItemsSource = userTimeLine;
         }
 
         private void sendTweetClick(object sender, RoutedEventArgs e)
         {
 
-            SettingsUC.maintwitter.twitterUser.publishTweet(tweetTextBox.Text);
+            UserHandler.Twitter.twitterUser.publishTweet(tweetTextBox.Text);
             tweetTextBox.Text = "twitter sendt";
 
         }

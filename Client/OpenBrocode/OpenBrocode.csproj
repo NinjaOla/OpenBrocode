@@ -105,7 +105,7 @@
     <Compile Include="MailUC.xaml.cs">
       <DependentUpon>MailUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User\LoginHandler.cs" />
+    <Compile Include="User\UserHandler.cs" />
     <Compile Include="User\Settings.cs" />
     <Compile Include="SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
