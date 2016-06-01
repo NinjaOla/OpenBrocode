@@ -42,7 +42,7 @@ namespace OpenBrocode.JSON
 
 
         public void objectToJson(string pFaceUN, string pFacePW, bool pFaceCHK, string pMailUN,
-            string pMailPW, bool pMailCHK, string pTwitUN, string pTwitPW, bool pTwitCHK)
+            string pMailPW, bool pMailCHK, bool pTwitCHK)
         {
 
             this.settings.FaceUN = pFaceUN;
@@ -51,8 +51,6 @@ namespace OpenBrocode.JSON
             this.settings.MailUN = pMailUN;
             this.settings.MailPW = pMailPW;
             this.settings.mailCHK = pMailCHK;
-            this.settings.TwitUN = pTwitUN;
-            this.settings.TwitPW = pTwitPW;
             this.settings.TwitCHK = pTwitCHK;
 
 

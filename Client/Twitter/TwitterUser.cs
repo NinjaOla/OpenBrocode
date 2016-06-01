@@ -32,12 +32,13 @@ namespace Twitter
         {
             return Tweet.PublishTweet(text);
 
-            IEnumerable<ITwitterException> latestException = ExceptionHandler.GetExceptions();
+           /** IEnumerable<ITwitterException> latestException = ExceptionHandler.GetExceptions();
 
             foreach (ITwitterException exception in latestException)
             {
                 System.Console.WriteLine("Exception: '{0}'", exception.ToString());
-            }
+            } */
+
         }
 
         /// <summary>

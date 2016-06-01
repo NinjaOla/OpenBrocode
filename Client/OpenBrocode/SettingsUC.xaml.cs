@@ -39,8 +39,7 @@ namespace OpenBrocode
             JsonHandler handler = new JsonHandler();
 
             handler.objectToJson(txtBoxFace.Text, pwBoxFace.Password, (bool)chkBoxFace.IsChecked,
-                 txtBoxMail.Text, pwBoxMail.Password, (bool)chkBoxMail.IsChecked,
-                 txtBoxTwit.Text, pwBoxTwit.Password, (bool)chkBoxTwit.IsChecked);
+                 txtBoxMail.Text, pwBoxMail.Password, (bool)chkBoxMail.IsChecked, (bool)chkBoxTwit.IsChecked);
         }
 
 
@@ -60,8 +59,6 @@ namespace OpenBrocode
             pwBoxMail.Password = sc.MailPW;
             if (sc.mailCHK == true) chkBoxMail.IsChecked = true;
             //twitter
-            txtBoxTwit.Text = sc.TwitUN;
-            pwBoxTwit.Password = sc.TwitPW;
             if (sc.TwitCHK == true) chkBoxTwit.IsChecked = true;
             
         }
@@ -97,15 +94,6 @@ namespace OpenBrocode
             saveToFile();
         }
 
-        private void twituKEYUP(object sender, KeyEventArgs e)
-        {
-            saveToFile();
-        }
-
-        private void twitPKEYUP(object sender, KeyEventArgs e)
-        {
-            saveToFile();
-        }
 
         private void chkTwitCLICK(object sender, RoutedEventArgs e)
         {
