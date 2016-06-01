@@ -17,7 +17,7 @@ namespace Twitter
 
         private readonly string ConsumerKey = "GoxcBKPhOucTVyvjvPyMVE2Rf";
         private readonly string ConsumerSecret = "0yrMFJrEEzFxgAeFWdNveotAdeCEebHRiwRAF406zK8wHfnFJO";
-        private Tweetinvi.Core.Authentication.IAuthenticationContext authenticationContext;
+        private IAuthenticationContext authenticationContext;
 
 
 
