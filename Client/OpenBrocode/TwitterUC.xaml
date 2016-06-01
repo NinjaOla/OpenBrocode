@@ -8,5 +8,10 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Label Content="Test label at the middle UC(Twitter)" Name="lblMid"/>
+        <Button x:Name="_btnTweet" Content="Send Tweet" HorizontalAlignment="Left" Margin="80,116,0,0" VerticalAlignment="Top" Width="145" Height="54" Click="sendTweetClick"/>
+        <TextBox x:Name="tweetTextBox" HorizontalAlignment="Left" Height="26" Margin="10,76,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="280"/>
+
+
+
     </Grid>
 </UserControl>

@@ -27,12 +27,12 @@ namespace OpenBrocode
     public partial class SettingsUC : UserControl
     {
 
-        private MainTwitter maintwitter;
+        public static MainTwitter maintwitter;
 
         public SettingsUC()
         {
-            this.maintwitter = new MainTwitter();
-            this.maintwitter.loginEventHandler += new EventHandler(loginEventHandler);
+            maintwitter = new MainTwitter();
+            maintwitter.loginEventHandler += new EventHandler(loginEventHandler);
             InitializeComponent();
             loadToUI();
 
@@ -46,7 +46,7 @@ namespace OpenBrocode
 
         private void btnTwitterClick(object sender, RoutedEventArgs e)
         {
-            this.maintwitter.authenticateApp();
+            maintwitter.authenticateApp();
             InputBox.Visibility = Visibility.Visible;
            
 
@@ -57,7 +57,7 @@ namespace OpenBrocode
 
         private void YesButton_Click(object sender, RoutedEventArgs e)
         {
-            this.maintwitter.authenticateUser(InputTextBox.Text);
+            maintwitter.authenticateUser(InputTextBox.Text);
             InputBox.Visibility = Visibility.Collapsed;
             chkBoxTwit.IsChecked = true;
             saveToFile();

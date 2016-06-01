@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Twitter;
 
 
 
@@ -22,11 +23,22 @@ namespace OpenBrocode
     /// </summary>
     public partial class TwitterUC : UserControl
     {
+
+        
         public TwitterUC()
         {
+            
             InitializeComponent();
             
             
+        }
+
+        private void sendTweetClick(object sender, RoutedEventArgs e)
+        {
+
+            SettingsUC.maintwitter.twitterUser.publishTweet(tweetTextBox.Text);
+            tweetTextBox.Text = "twitter sendt";
+
         }
     }
 }
