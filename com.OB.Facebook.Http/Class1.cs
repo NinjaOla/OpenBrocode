@@ -8,5 +8,6 @@ namespace com.OB.Facebook.Http
 {
     public class Class1
     {
+        private string tweet; 
     }
 }
