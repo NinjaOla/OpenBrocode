@@ -29,8 +29,6 @@ namespace OpenBrocode.JSON
         public bool mailCHK { get; set; }
 
         //twitter
-        public string TwitUN { get; set; }
-        public string TwitPW { get; set; }
         public bool TwitCHK { get; set; }
 
 
