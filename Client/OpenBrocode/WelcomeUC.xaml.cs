@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.VisualBasic;
+using OpenBrocode.User; 
 
 namespace OpenBrocode
 {
@@ -23,14 +24,17 @@ namespace OpenBrocode
     {
         private string usrNameText;
 
+        private LoginHandler handler; 
+
         public WelcomeUC()
         {
+            handler = new LoginHandler(); 
             InitializeComponent();
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            if (usrNameText == "Robin")
+            if(this.handler.login(usrNameText.ToString(), ""))
             {
                 MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
                 mwObj.initialLoadPanel();

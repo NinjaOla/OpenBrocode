@@ -92,6 +92,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Exceptions\UserLoggedInException.cs" />
     <Compile Include="FacebookUC.xaml.cs">
       <DependentUpon>FacebookUC.xaml</DependentUpon>
     </Compile>
@@ -104,6 +105,8 @@
     <Compile Include="MailUC.xaml.cs">
       <DependentUpon>MailUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User\LoginHandler.cs" />
+    <Compile Include="User\Settings.cs" />
     <Compile Include="SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,7 @@
     <Compile Include="TwitterUC.xaml.cs">
       <DependentUpon>TwitterUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User\UserObject.cs" />
     <Compile Include="WelcomeUC.xaml.cs">
       <DependentUpon>WelcomeUC.xaml</DependentUpon>
     </Compile>

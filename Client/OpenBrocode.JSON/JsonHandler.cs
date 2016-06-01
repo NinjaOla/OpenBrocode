@@ -38,6 +38,7 @@ namespace OpenBrocode.JSON
         {
 
             objectFromJSON();
+
             if (this.settings == null)
                 throw new Exception("The settings class is null");
 
@@ -60,9 +61,48 @@ namespace OpenBrocode.JSON
 
 
             string jsonToFile = JsonConvert.SerializeObject(settings);
-            File.WriteAllText(settings.Filepath, jsonToFile);
-           
-            
+
+            this.writetoFile(settings); 
+            //File.WriteAllText(settings.Filepath, jsonToFile);
+        }
+
+        public void write(SettingsClass settings)
+        {
+            this.writetoFile(settings); 
+        }
+
+
+        /// <summary>
+        /// Creates a new file with the info proviede from the settings object. 
+        /// </summary>
+        /// <param name="settings"></param>
+        private void writetoFile(SettingsClass settings)
+        {
+
+            JsonSerializer serializer = new JsonSerializer()
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                Formatting = Formatting.Indented,
+
+
+            };
+
+            FileStream fs = new FileStream(settings.Filepath, FileMode.CreateNew);
+
+            fs.Position = fs.Length;
+
+            using (StreamWriter sw = new StreamWriter(fs))
+            using (JsonWriter js = new JsonTextWriter(sw))
+            {
+                try
+                {
+                    serializer.Serialize(js, settings);
+                }
+                catch (Exception e) 
+                {
+                    throw new Exception("Problem writing to the file", e); 
+                }
+            }
         }
 
         

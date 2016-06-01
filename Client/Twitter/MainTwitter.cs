@@ -42,8 +42,23 @@ namespace Twitter
 
         public MainTwitter()
         {
-            
-            
+
+        }
+
+        public void authenticateUser(string userAccessToken, string userAccessTokenSecret)
+        {
+            if (this.userCredentials == null)
+            {
+                // Create a new set of credentials for the application.
+                var appCredentials = new TwitterCredentials(this.ConsumerKey, this.ConsumerSecret, userAccessToken, userAccessTokenSecret);
+
+                // Init the authentication process and store the related `AuthenticationContext`.
+                this.authenticationContext = AuthFlow.InitAuthentication(appCredentials);
+            }
+            else
+                throw new Exception("User credensials cannot be null"); 
+
+     
         }
 
         //Will run in GUI, waites for input.
