@@ -18,15 +18,17 @@ namespace Twitter.Console
             twitter.loginEventHandler += new EventHandler(loginEvent);
             twitter.authenticateApp();
 
-            List<ITweet> userTimeline = twitter.twitterUser.HomeTimeline.ToList();
+            /**List<ITweet> userTimeline = twitter.twitterUser.HomeTimeline.ToList();
             foreach(ITweet tweet in userTimeline)
             {
                 if(tweet.Text.Equals("something"))
                 {
                     twitter.twitterUser.deleteTweet(tweet.Id);
                 }
-            }
+            } */
 
+            System.Console.WriteLine("Input your tweet: ");
+            twitter.twitterUser.publishTweet(System.Console.ReadLine());
             System.Console.ReadLine();
         }
 
@@ -35,8 +37,6 @@ namespace Twitter.Console
             MainTwitter twitter = (MainTwitter)sender;
             Auth.SetUserCredentials(twitter.getConsumerKey(), twitter.getConsumerSecret(), twitter.getUserAccessToken(), twitter.getUserAccessTokenSecret());
             System.Console.WriteLine("Login works");
-            System.Console.WriteLine("Input your tweet: ");
-            twitter.twitterUser.publishTweet(System.Console.ReadLine());
         }
 
         public static void getUserHomeTimeline(MainTwitter twitter)
