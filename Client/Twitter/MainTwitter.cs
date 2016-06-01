@@ -45,23 +45,31 @@ namespace Twitter
 
         }
 
-        public MainTwitter(string userAccessToken, string userAccessTokenSecret)
+        public bool userLoggedIn()
         {
-            this.authenticateUser(userAccessToken, userAccessTokenSecret); 
+            if(this.user != null)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        public void authenticateUser(string userAccessToken, string userAccessTokenSecret)
+        public bool authenticateUser(string userAccessToken, string userAccessTokenSecret)
         {
             if (this.userCredentials == null)
             {
-                // Create a new set of credentials for the application.
-                var appCredentials = new TwitterCredentials(this.ConsumerKey, this.ConsumerSecret, userAccessToken, userAccessTokenSecret);
-
-                // Init the authentication process and store the related `AuthenticationContext`.
-                this.authenticationContext = AuthFlow.InitAuthentication(appCredentials);
+                var userCredentials = new TwitterCredentials(this.ConsumerKey, this.ConsumerSecret, userAccessToken, userAccessTokenSecret);
+                this.User = Tweetinvi.User.GetAuthenticatedUser(userCredentials);
+                if(this.user != null)
+                {
+                    return true;
+                }
             }
             else
-                throw new Exception("User credensials cannot be null"); 
+                throw new Exception("User credensials cannot be null");
+
+            return false;
 
      
         }

@@ -55,7 +55,11 @@ namespace OpenBrocode.User
 
             if(user.settings.settings.TwitterUserToken != null && user.settings.settings.TwitterUserSecretToken != null)
             {
-
+                Twitter = new MainTwitter();
+                if(Twitter.authenticateUser(user.settings.settings.TwitterUserToken, user.settings.settings.TwitterUserSecretToken))
+                {
+                    return;
+                }
             }
         }
 
