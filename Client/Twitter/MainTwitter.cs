@@ -62,7 +62,7 @@ namespace Twitter
             this.storeUserCredentials(this.userCredentials.AccessToken, this.userCredentials.AccessTokenSecret);
 
             // Gives feedback that the user is authenticated
-            Console.WriteLine("Authenticated user: " + this.User);
+            // Console.WriteLine("Authenticated user: " + this.User);
 
             this.twitterUser = new TwitterUser(this.user);
         }

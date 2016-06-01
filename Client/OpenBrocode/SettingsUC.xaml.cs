@@ -40,7 +40,7 @@ namespace OpenBrocode
 
         public void loginEventHandler(object sender, EventArgs e)
         {
-            System.Console.WriteLine("Vi er framme");
+            //System.Console.WriteLine("Vi er framme");
         }
 
 
