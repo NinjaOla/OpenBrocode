@@ -9,23 +9,24 @@ namespace OpenBrocode.User
 {
     internal class Settings
     {
-        public JsonHandler handler = new JsonHandler(); 
+        public JsonHandler handler = new JsonHandler();
+
+        public SettingsClass settings; 
 
         public Settings()
         {
             this.load();
         }
 
-        public  SettingsClass load()
+        public  void load()
         {
-            return handler.getSettings();
+            this.settings = handler.getSettings();
         }
 
         //TODO: Update this to check if an value is null ... 
-        public  void writeFile(SettingsClass settings)
+        public void writeFile()
         {
-            handler.write(settings); 
+            handler.write(this.settings); 
         }
-
     }
 }

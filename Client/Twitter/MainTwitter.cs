@@ -45,6 +45,11 @@ namespace Twitter
 
         }
 
+        public MainTwitter(string userAccessToken, string userAccessTokenSecret)
+        {
+            this.authenticateUser(userAccessToken, userAccessTokenSecret); 
+        }
+
         public void authenticateUser(string userAccessToken, string userAccessTokenSecret)
         {
             if (this.userCredentials == null)

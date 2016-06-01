@@ -18,6 +18,31 @@ namespace OpenBrocode.JSON
         //The sections we have now/soon
         //The checkers are to check if the user have them enabled. If not they should not show up on the side menu (LeftSideBarUC)
 
+        public SettingsClass()
+        {
+
+        }
+
+        public SettingsClass(SettingsClass c)
+        {
+            this.FaceUN = c.FaceUN;
+
+            this.FacePW = c.FacePW;
+
+            this.FaceCHK = c.FaceCHK;
+
+            this.MailUN = c.MailUN;
+
+            this.MailPW = c.MailPW;
+
+            this.mailCHK = c.mailCHK;
+
+            this.TwitCHK = c.TwitCHK;
+
+            this.Filepath = c.Filepath; 
+        }
+
+
         //facebook
         [JsonProperty(NullValueHandling = NullValueHandling.Include)]
         public string FaceUN { get; set; }
@@ -39,6 +64,11 @@ namespace OpenBrocode.JSON
         [JsonProperty]
         public bool TwitCHK { get; set; }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Include)]
+        public string TwitterUserToken { get; set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Include)]
+        public string TwitterUserSecretToken { get; set; }
 
         //user
         [JsonProperty(NullValueHandling = NullValueHandling.Include)]

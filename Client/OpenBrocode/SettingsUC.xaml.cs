@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using OpenBrocode.JSON;
 using Twitter;
+using OpenBrocode.User;
 
 
 
@@ -40,7 +41,13 @@ namespace OpenBrocode
 
         public void loginEventHandler(object sender, EventArgs e)
         {
-            //System.Console.WriteLine("Vi er framme");
+            MainTwitter twitter = (MainTwitter)sender;
+
+            UserHandler.getUser().settings.settings.TwitterUserToken = twitter.getUserAccessToken();
+
+            UserHandler.getUser().settings.settings.TwitterUserSecretToken = twitter.getUserAccessTokenSecret();
+
+            UserHandler.getUser().settings.writeFile(); 
         }
 
 
@@ -65,14 +72,16 @@ namespace OpenBrocode
 
         }
 
-
+        
 
         public void saveToFile()
         {
-            JsonHandler handler = new JsonHandler();
+            UserHandler.getUser().settings.writeFile();
 
-            handler.objectToJson(txtBoxFace.Text, pwBoxFace.Password, (bool)chkBoxFace.IsChecked,
-                 txtBoxMail.Text, pwBoxMail.Password, (bool)chkBoxMail.IsChecked, (bool)chkBoxTwit.IsChecked);
+            //JsonHandler handler = new JsonHandler();
+
+            //handler.objectToJson(txtBoxFace.Text, pwBoxFace.Password, (bool)chkBoxFace.IsChecked,
+            //     txtBoxMail.Text, pwBoxMail.Password, (bool)chkBoxMail.IsChecked, (bool)chkBoxTwit.IsChecked);
         }
 
 
