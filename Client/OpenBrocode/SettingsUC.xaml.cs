@@ -59,6 +59,9 @@ namespace OpenBrocode
         {
             this.maintwitter.authenticateUser(InputTextBox.Text);
             InputBox.Visibility = Visibility.Collapsed;
+            chkBoxTwit.IsChecked = true;
+            saveToFile();
+            _btnTwitter.IsEnabled = false;
 
         }
 
@@ -90,7 +93,15 @@ namespace OpenBrocode
             if (sc.mailCHK == true) chkBoxMail.IsChecked = true;
             //twitter
             if (sc.TwitCHK == true) chkBoxTwit.IsChecked = true;
-            
+
+            if (chkBoxTwit.IsChecked == true)
+            {
+                _btnTwitter.IsEnabled = false;
+            }
+            else
+            {
+                _btnTwitter.IsEnabled = true;
+            }            
         }
 
         private void faceUKEYUP(object sender, KeyEventArgs e)
@@ -128,6 +139,8 @@ namespace OpenBrocode
         private void chkTwitCLICK(object sender, RoutedEventArgs e)
         {
             saveToFile();
+            loadToUI();
+
         }
 
 
