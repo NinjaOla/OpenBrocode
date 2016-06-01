@@ -20,6 +20,11 @@ namespace OpenBrocode.JSON
 
         private void objectFromJSON()
         {
+            if(!File.Exists(this.settings.Filepath))
+            {
+                objectToJson();
+            }
+
             // strings the json file
             string jsonString = File.ReadAllText(settings.Filepath);
             //Converts it to an object from Settings class
@@ -41,8 +46,8 @@ namespace OpenBrocode.JSON
 
 
 
-        public void objectToJson(string pFaceUN, string pFacePW, bool pFaceCHK, string pMailUN,
-            string pMailPW, bool pMailCHK, bool pTwitCHK)
+        public void objectToJson(string pFaceUN = null, string pFacePW = null, bool pFaceCHK = false, string pMailUN = null,
+            string pMailPW = null, bool pMailCHK = false, bool pTwitCHK = false)
         {
 
             this.settings.FaceUN = pFaceUN;
