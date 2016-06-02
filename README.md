@@ -14,7 +14,7 @@ Here we will add an example of how we manipulate the API's to gain the informati
 as well as retrieve the Tweets from the timeline and view different fields from the Tweets (Author, text, date for example).
 
 
-Here is an example of how we retrieve the tweets of a user:
+* Here is an example of how we retrieve the tweets of a user:
 ```
         public IEnumerable<ITweet> getTweets(int maxTweets)
         {
@@ -28,7 +28,7 @@ Here is an example of how we retrieve the tweets of a user:
         }
 ```
 
-Here is an example of how we user authentication:
+* Here is an example of how we user authentication:
 ```
         public void loginEventHandler(object sender, EventArgs e)
         {
