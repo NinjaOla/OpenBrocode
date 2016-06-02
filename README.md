@@ -8,6 +8,12 @@ The idea of Open-Sourcing it was in our opinion the best alternative here, as we
 are free to continue working on the project by adding other API's and integrating it. The ultimate goal is to have it so well functioning that 
 new contributors can just add their API of choice and then be able to toggle which should be active from the settings menu.
 
+# Walkthrough example of the functionality
+
+Here is an example of how the program connects to twitter and allows you to post a tweet and watch the tweets in your timeline:
+[Walkthrough](https://github.com/Nyranith/OpenBrocode/blob/master/SAS%20twitter%20guide.pdf)
+
+
 # Code example
 
 Here we will add an example of how we manipulate the API's to gain the information we are after. For example, we have managed to both send a Tweet on Twitter from our GUI,
@@ -51,6 +57,12 @@ We conducted an online survey where the replies(around 250 replies in total) ind
 and almost 50% had 2-4 open tabs of social media at once. 
 
 # Installation
+
+As this project is not yet finished, an installation wizard has not yet been created. It is, however, rather simple to get it running to try it out.
+
+1. Clone the repository
+2. Open it in your preferred capable IDE (This is written in C#/.Net and is therefore reccommended to be run in Visual Studio)
+3. Clean, build and start the project
 
 # API Reference
 
