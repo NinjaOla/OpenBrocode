@@ -61,8 +61,9 @@ and almost 50% had 2-4 open tabs of social media at once.
 As this project is not yet finished, an installation wizard has not yet been created. It is, however, rather simple to get it running to try it out.
 
 1. Clone the repository
-2. Open it in your preferred capable IDE (This is written in C#/.Net and is therefore reccommended to be run in Visual Studio)
-3. Clean, build and start the project
+2. Open it in Visual Studio 2013 or newer (This is written in C#/.Net and is therefore reccommended to be run in Visual Studio)
+3. Open OpenBrocode.sln from the Client folder. 
+4. Clean, build and start the project
 
 # API Reference
 
