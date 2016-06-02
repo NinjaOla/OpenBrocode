@@ -151,10 +151,10 @@ namespace Mail
             using (ImapClient Client = new ImapClient("imap.gmail.com", 993, mailAddress, mailPassword, AuthMethod.Login, true))
             {
 
-                IEnumerable<uint> uids = Client.Search(SearchCondition.Seen());
+                IEnumerable<uint> uids = Client.Search(SearchCondition.All());
 
-                this.messages = Client.GetMessages(uids,false);
-
+                this.messages = Client.GetMessages(uids,true);
+                //true means it sets the messages to seen. But we now read All messages because of "seachcondition.all()"
                 
             }
         }

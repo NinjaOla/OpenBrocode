@@ -102,6 +102,9 @@
     <Compile Include="HomeViewUC.xaml.cs">
       <DependentUpon>HomeViewUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="mailInboxUC.xaml.cs">
+      <DependentUpon>mailInboxUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MailUC.xaml.cs">
       <DependentUpon>MailUC.xaml</DependentUpon>
     </Compile>
@@ -133,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LeftSideBarUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="mailInboxUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

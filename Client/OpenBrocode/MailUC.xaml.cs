@@ -55,7 +55,7 @@ namespace OpenBrocode
         private void _cancelBtn_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
-            mwObj.loadPanel(new HomeViewUC());
+            mwObj.loadPanel(new mailInboxUC());
         }
     }
 }
