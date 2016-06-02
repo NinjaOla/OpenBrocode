@@ -64,7 +64,8 @@ namespace OpenBrocode
 
         private void btnTwitterClick(object sender, RoutedEventArgs e)
         {
-            maintwitter.authenticateApp();
+            UserHandler.Twitter.authenticateApp(); 
+            //maintwitter.authenticateApp();
             InputBox.Visibility = Visibility.Visible;
            
 
@@ -75,7 +76,8 @@ namespace OpenBrocode
 
         private void YesButton_Click(object sender, RoutedEventArgs e)
         {
-            maintwitter.authenticateUser(InputTextBox.Text);
+            //maintwitter.authenticateUser(InputTextBox.Text);
+            UserHandler.Twitter.authenticateUser(InputTextBox.Text);
             InputBox.Visibility = Visibility.Collapsed;
             chkBoxTwit.IsChecked = true;
             saveToFile();
