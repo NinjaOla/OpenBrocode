@@ -28,11 +28,17 @@ namespace OpenBrocode
 
         public TwitterUC()
         {
-            if(!UserHandler.Twitter.userLoggedIn())
+            
+                if (UserHandler.Twitter != null && !UserHandler.Twitter.userLoggedIn())
+                {
+                    WelcomeUC welUcObject = new WelcomeUC();
+                    return;
+                } else if (UserHandler.Twitter == null)
             {
                 WelcomeUC welUcObject = new WelcomeUC();
-                return;  
+                return;
             }
+            
 
             InitializeComponent();
             getTweetsToList();
