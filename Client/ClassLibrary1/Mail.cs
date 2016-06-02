@@ -138,6 +138,10 @@ namespace Mail
 
         }
         
+        public String getMailAddress()
+        {
+            return mailAddress;
+        }
 
         //Denne metoden henter uleste e-post fra inboxen
         public void retrieveUnseenMessages()

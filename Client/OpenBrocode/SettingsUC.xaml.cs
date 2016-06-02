@@ -165,6 +165,9 @@ namespace OpenBrocode
 
         }
 
+        private void _btnMail_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

@@ -18,7 +18,7 @@
         
         <Button x:Name="_btnTwitter" Content="Authorize Twitter" HorizontalAlignment="Left" Height="19" Margin="121,267,0,0" VerticalAlignment="Top" Width="161" Click="btnTwitterClick"/>
 
-        
+
         <Grid x:Name="InputBox" Visibility="Collapsed">
             <Grid Background="Black" Opacity="0.5"/>
             <Border
