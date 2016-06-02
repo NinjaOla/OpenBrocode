@@ -71,4 +71,11 @@ As this project is not yet finished, an installation wizard has not yet been cre
 
 # Contributors
 
+To be able to contribute here, you have to either create an issue for us to look at and review or create a pull request if you have something to add or if you have fixed something yourself. Remember to always comment and describe what you contribute to make it easier for others to review and possibly use the contribution. 
+
+We accept all contributors and no question or remark is unwanted. 
+
 # License
+
+(GNU GPL v3)
+Read LICENSE
