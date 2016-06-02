@@ -78,4 +78,5 @@ We accept all contributors and no question or remark is unwanted.
 # License
 
 (GNU GPL v3)
+
 Read LICENSE
