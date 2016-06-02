@@ -15,7 +15,9 @@ namespace Mail
 {
     public class mailSender
     {
-       
+
+        public IEnumerable<MailMessage> messages;
+
         public mailSender(string mail, string password)
         {
             mailAddress = mail;
@@ -144,16 +146,16 @@ namespace Mail
         }
 
         //Denne metoden henter uleste e-post fra inboxen
-        public IEnumerable<MailMessage> retrieveUnseenMessages()
+        public void retrieveUnseenMessages()
         {
             using (ImapClient Client = new ImapClient("imap.gmail.com", 993, mailAddress, mailPassword, AuthMethod.Login, true))
             {
 
-                IEnumerable<uint> uids = Client.Search(SearchCondition.Unseen());
+                IEnumerable<uint> uids = Client.Search(SearchCondition.Seen());
 
-                IEnumerable<MailMessage> messages = Client.GetMessages(uids);
+                this.messages = Client.GetMessages(uids,false);
 
-                return messages;
+                
             }
         }
         [STAThread]
