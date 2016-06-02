@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Twitter;
+using Mail;
 
 namespace OpenBrocode.User
 {
@@ -21,6 +22,8 @@ namespace OpenBrocode.User
         public static MainTwitter Twitter {get; set; }
 
         private static UserObject user; 
+
+        public static mailSender Mail { get; set; }
 
         public UserHandler()
         {
@@ -58,10 +61,28 @@ namespace OpenBrocode.User
                 Twitter = new MainTwitter();
                 if(Twitter.authenticateUser(user.settings.settings.TwitterUserToken, user.settings.settings.TwitterUserSecretToken))
                 {
-                    return;
+                   // return;
                 }
             }
+
+            if(user.settings.settings.MailUN != null && user.settings.settings.MailPW != null)
+            {
+                Mail = new mailSender(user.settings.settings.MailUN, user.settings.settings.MailPW);
+
+            }
+
         }
+
+
+        public static void mailHandler(string username, string password)
+        {
+            Mail = new mailSender(username, password);
+            user.settings.settings.MailUN = username;
+            user.settings.settings.MailPW = password;
+            user.settings.writeFile();
+        }
+
+
 
         public static bool logOut()
         {

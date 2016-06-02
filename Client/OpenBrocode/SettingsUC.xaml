@@ -34,11 +34,14 @@
                     <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputTextBox"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="OkButton" Margin="5" Content="Ok" Background="{x:Null}" Click="YesButton_Click"/>
+                        
                     </StackPanel>
                 </StackPanel>
             </Border>
 
-        </Grid>                
+        </Grid>
+        <Button x:Name="_btnSave" Content="SaveFile" HorizontalAlignment="Left" Margin="100,324,0,0" VerticalAlignment="Top" Width="140" Height="42" Click="_btnSave_Click"/>
+
     </Grid>
     
     

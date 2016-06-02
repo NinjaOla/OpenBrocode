@@ -46,6 +46,8 @@ namespace OpenBrocode
 
             }
 
+            setCHKMail();
+
             loadToUI();
 
         }
@@ -109,10 +111,12 @@ namespace OpenBrocode
             txtBoxFace.Text = sc.FaceUN;
             pwBoxFace.Password = sc.FacePW;
             if (sc.FaceCHK == true) chkBoxFace.IsChecked=true;
+
             //mail
             txtBoxMail.Text = sc.MailUN;
             pwBoxMail.Password = sc.MailPW;
             if (sc.mailCHK == true) chkBoxMail.IsChecked = true;
+
             //twitter
             if (sc.TwitCHK == true) chkBoxTwit.IsChecked = true;
 
@@ -123,17 +127,19 @@ namespace OpenBrocode
             else
             {
                 _btnTwitter.IsEnabled = true;
-            }            
+            }       
         }
 
         private void faceUKEYUP(object sender, KeyEventArgs e)
         {
-            saveToFile();
+            UserHandler.getUser().settings.settings.FaceUN = txtBoxFace.Text;
+            
         }
 
         private void facePKEYUP(object sender, KeyEventArgs e)
         {
-            saveToFile();
+            UserHandler.getUser().settings.settings.FacePW = pwBoxFace.Password;
+            
         }
 
         private void chkFCLICK(object sender, RoutedEventArgs e)
@@ -143,12 +149,14 @@ namespace OpenBrocode
 
         private void mailUKEYUP(object sender, KeyEventArgs e)
         {
-            saveToFile();
+            UserHandler.getUser().settings.settings.MailUN = txtBoxMail.Text;
+            
         }
 
         private void mailPKEYUP(object sender, KeyEventArgs e)
         {
-            saveToFile();
+            UserHandler.getUser().settings.settings.MailPW = pwBoxMail.Password;
+            
         }
 
 
@@ -165,9 +173,19 @@ namespace OpenBrocode
 
         }
 
-        private void _btnMail_Click(object sender, RoutedEventArgs e)
+        private void _btnSave_Click(object sender, RoutedEventArgs e)
         {
+            saveToFile();
+            setCHKMail();
+        }
 
+
+        private void setCHKMail()
+        {
+            if(txtBoxMail.Text != null && pwBoxMail.Password != null)
+            {
+                chkBoxMail.IsChecked = true;
+            }
         }
     }
 }

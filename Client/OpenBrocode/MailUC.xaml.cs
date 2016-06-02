@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Mail;
+using OpenBrocode.User;
 
 
 namespace OpenBrocode
@@ -22,17 +23,32 @@ namespace OpenBrocode
     /// </summary>
     public partial class MailUC : UserControl
     {
-        private mailSender mailObj;
+        
+        
+
+
         public MailUC()
         {
             InitializeComponent();
-            mailObj = new mailSender("openbrocode@gmail.com", "brocode1337");
+            
+            if(UserHandler.Mail == null)
+            {
+
+                UserHandler.mailHandler(UserHandler.getUser().settings.settings.MailUN, UserHandler.getUser().settings.settings.MailPW);
+
+            }
+            
+            
+            
 
         }
 
         private void _sendBtn_Click(object sender, RoutedEventArgs e)
         {
-            mailObj.newMailMessage(mailObj.getMailAddress(), mailTo.Text, subject.Text, body.Text);
+            UserHandler.Mail.newMailMessage(UserHandler.Mail.getMailAddress(), mailTo.Text, subject.Text, body.Text);
+
+            //mailObj.newMailMessage(mailObj.getMailAddress(), mailTo.Text, subject.Text, body.Text);
+
             subject.Text = "Mail sent";
         }
 

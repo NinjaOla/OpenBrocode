@@ -144,7 +144,7 @@ namespace Mail
         }
 
         //Denne metoden henter uleste e-post fra inboxen
-        public void retrieveUnseenMessages()
+        public IEnumerable<MailMessage> retrieveUnseenMessages()
         {
             using (ImapClient Client = new ImapClient("imap.gmail.com", 993, mailAddress, mailPassword, AuthMethod.Login, true))
             {
@@ -153,7 +153,7 @@ namespace Mail
 
                 IEnumerable<MailMessage> messages = Client.GetMessages(uids);
 
-                Console.WriteLine(messages);
+                return messages;
             }
         }
         [STAThread]
