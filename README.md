@@ -13,7 +13,9 @@ new contributors can just add their API of choice and then be able to toggle whi
 Here we will add an example of how we manipulate the API's to gain the information we are after. For example, we have managed to both send a Tweet on Twitter from our GUI,
 as well as retrieve the Tweets from the timeline and view different fields from the Tweets (Author, text, date for example).
 
-'''
+
+Here is an example of how we retrieve the tweets of a user:
+```
         public IEnumerable<ITweet> getTweets(int maxTweets)
         {
             var userTimeline = new Tweetinvi.Core.Parameters.UserTimelineParameters()
@@ -24,7 +26,22 @@ as well as retrieve the Tweets from the timeline and view different fields from 
 
             return Timeline.GetUserTimeline(this.authenticatedUser, userTimeline);
         }
-'''
+```
+
+Here is an example of how we user authentication:
+```
+        public void loginEventHandler(object sender, EventArgs e)
+        {
+            MainTwitter twitter = (MainTwitter)sender;
+
+            UserHandler.getUser().settings.settings.TwitterUserToken = twitter.getUserAccessToken();
+
+            UserHandler.getUser().settings.settings.TwitterUserSecretToken = twitter.getUserAccessTokenSecret();
+
+            UserHandler.getUser().settings.writeFile(); 
+        }
+```
+
 
 # Motivation
 
