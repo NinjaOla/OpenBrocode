@@ -58,7 +58,7 @@ and almost 50% had 2-4 open tabs of social media at once.
 
 # Installation
 
-We have two main ways of installing the program. The first one is to use the provided installation file and then execute the executable in the SocialAwarenessSystem in the target file. The installation file can be downloaded [here](https://github.com/Nyranith/OpenBrocode/blob/master/SAS-installer.exe?raw=true).
+We have two main ways of installing the program. The first one is to use the provided installation file and install the program. Then you execute the OpenBrocode.exe file from the SocialAwarenessSystem folder to start the program. The folder is usually saved within Program Files, but you can change the path as you like. The installation file can be downloaded [here](https://github.com/Nyranith/OpenBrocode/blob/master/SAS-installer.exe?raw=true).
 
 The other one is to do the following:
 
