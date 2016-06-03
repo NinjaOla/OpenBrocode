@@ -7,6 +7,28 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Label Content="Test label at the middle UC(Twitter)" Name="lblMid"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="listbox1" Grid.Row="0" BorderThickness="0" ItemsSource="{Binding}" Height="250">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <TextBlock Text="{Binding CreatedBy.Name}"/>
+                        <TextBlock Text=" @"/>
+                        <TextBlock Text="{Binding CreatedBy.ScreenName}"/>
+                        <TextBlock Text=" | "/>
+                        <TextBlock Text="{Binding Text}"/>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button x:Name="_btnTweet" Grid.Row="1" Content="Post Tweet" HorizontalAlignment="Right" Margin="71,0,0,4" VerticalAlignment="Bottom" Width="145" Height="54" Click="sendTweetClick"/>
+        <TextBox x:Name="tweetTextBox" HorizontalAlignment="Left" Height="30" Margin="0,0,0,10" TextWrapping="Wrap" Text="Input tweet" VerticalAlignment="Bottom" Width="290" Grid.Row="1"/>
+
+
+
     </Grid>
 </UserControl>

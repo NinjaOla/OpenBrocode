@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="OpenBrocode.mailInboxUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OpenBrocode"
+             mc:Ignorable="d" d:DesignWidth="300" Height="424.26">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="listbox1" Grid.Row="0" BorderThickness="0" ItemsSource="{Binding}" Height="250" Margin="0,79,0,24">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <TextBlock Text="From: "/>
+                        <TextBlock Text="{Binding From}"/>
+                        <TextBlock Text="  |  "/>
+                        <TextBlock Text="{Binding Body}"/>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="_btnWriteMail" Content="New Mail" HorizontalAlignment="Left" Margin="90,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="117" Height="30" Click="_btnWriteMail_Click"/>
+        <Button x:Name="_btnLoadMail" Content="Load Messages, Can take TIME!" HorizontalAlignment="Left" Margin="9,14,0,0" VerticalAlignment="Top" Width="291" Click="_btnLoadMail_Click"/>
+
+
+
+    </Grid>
+</UserControl>

@@ -4,9 +4,46 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:OpenBrocode"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             mc:Ignorable="d" Height="443.059" Width="326.891">
     <Grid>
-        <Label Content="Test label at the middle UC(Settings)" Name="lblMid"/>
+        <CheckBox x:Name="chkBoxFace" Content="Facebook" HorizontalAlignment="Left" Margin="38,84,0,0" VerticalAlignment="Top" Click="chkFCLICK"/>
+        <CheckBox x:Name="chkBoxMail" Content="Mail" HorizontalAlignment="Left" Margin="38,170,0,0" VerticalAlignment="Top" Click="chkMCLICK"/>
+        <CheckBox x:Name="chkBoxTwit" Content="Twitter" HorizontalAlignment="Left" Margin="38,267,0,0" VerticalAlignment="Top" Click="chkTwitCLICK"/>
+
+        <PasswordBox x:Name="pwBoxFace" HorizontalAlignment="Left" Margin="121,101,0,0" VerticalAlignment="Top" Width="161" KeyUp="facePKEYUP"/>
+        <PasswordBox x:Name="pwBoxMail" HorizontalAlignment="Left" Margin="121,188,0,0" VerticalAlignment="Top" Width="161" KeyUp="mailPKEYUP"/>
+
+        <TextBox x:Name="txtBoxFace" HorizontalAlignment="Left" Height="19" Margin="121,70,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161" KeyUp="faceUKEYUP"/>
+        <TextBox x:Name="txtBoxMail" HorizontalAlignment="Left" Height="19" Margin="121,156,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="161" KeyUp="mailUKEYUP"/>
+        
+        <Button x:Name="_btnTwitter" Content="Authorize Twitter" HorizontalAlignment="Left" Height="19" Margin="121,267,0,0" VerticalAlignment="Top" Width="161" Click="btnTwitterClick"/>
+
+
+        <Grid x:Name="InputBox" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.5"/>
+            <Border
+            MinWidth="250"
+            Background="Orange" 
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            CornerRadius="0,55,0,55" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Margin="5" Text="Input PinCode:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputTextBox"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="OkButton" Margin="5" Content="Ok" Background="{x:Null}" Click="YesButton_Click"/>
+                        
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+        <Button x:Name="_btnSave" Content="SaveFile" HorizontalAlignment="Left" Margin="100,324,0,0" VerticalAlignment="Top" Width="140" Height="42" Click="_btnSave_Click"/>
+
     </Grid>
+    
+    
+
 </UserControl>

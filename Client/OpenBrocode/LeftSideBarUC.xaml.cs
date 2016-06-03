@@ -42,7 +42,7 @@ namespace OpenBrocode
         private void _btnMail_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
-            mwObj.loadPanel(new MailUC());
+            mwObj.loadPanel(new mailInboxUC());
         }
 
         private void _btnTwitter_Click(object sender, RoutedEventArgs e)
