@@ -29,7 +29,7 @@ namespace TwitterConsole
             } */
 
             System.Console.WriteLine("Input your tweet: ");
-            twitter.twitterUser.publishTweet(System.Console.ReadLine());
+            twitter.User.PublishTweet(System.Console.ReadLine());
             System.Console.ReadLine();
         }
 

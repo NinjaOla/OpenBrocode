@@ -93,6 +93,12 @@ namespace OpenBrocode
 
         public void saveToFile()
         {
+            if(UserHandler.Twitter != null)
+            {
+                UserHandler.getUser().settings.settings.TwitterUserToken = UserHandler.Twitter.getUserAccessToken();
+                UserHandler.getUser().settings.settings.TwitterUserSecretToken = UserHandler.Twitter.getUserAccessTokenSecret();
+            }
+
             UserHandler.getUser().settings.writeFile();
             if(UserHandler.getUser().settings.settings.MailUN != null && UserHandler.getUser().settings.settings.MailPW != null)
             {

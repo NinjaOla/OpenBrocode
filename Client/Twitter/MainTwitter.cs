@@ -55,7 +55,6 @@ namespace Twitter
             return false;
         }
 
-        //TODO : fix this. 
         public bool authenticateUser(string userAccessToken, string userAccessTokenSecret)
         {
             if (this.userCredentials == null)
@@ -65,7 +64,9 @@ namespace Twitter
 
                 if(this.user != null)
                 {
+                    storeUserCredentials(userCredentials.AccessToken, userCredentials.AccessTokenSecret);
                     this.twitterUser = new TwitterUser(this.user);
+
                     return true;
                 }
             }
@@ -73,11 +74,9 @@ namespace Twitter
                 throw new Exception("User credensials cannot be null");
 
             return false;
-
-     
         }
 
-        //Will run in GUI, waites for input.
+        //Will run in GUI, waits for input.
         public void authenticateUser(string pin)
         {
             // With this pin code it is now possible to get the credentials back from Twitter
@@ -91,9 +90,6 @@ namespace Twitter
 
             // Stores the usercredentials for later use
             this.storeUserCredentials(this.userCredentials.AccessToken, this.userCredentials.AccessTokenSecret);
-
-            // Gives feedback that the user is authenticated
-            // Console.WriteLine("Authenticated user: " + this.User);
 
             this.twitterUser = new TwitterUser(this.user);
         }
@@ -110,26 +106,7 @@ namespace Twitter
 
                 // Go to the URL so that Twitter authenticates the user and gives him a PIN code.
                 Process.Start(authenticationContext.AuthorizationURL);
-
-                // Ask the user to enter the pin code given by Twitter
-                //Console.WriteLine("Please input the autorization pin code from Twitter:");
-                //var pinCode = Console.ReadLine();
-
-                
             }
-        }
-
-        public void loginEvent(object sender, System.EventArgs e)
-        {
-            MainTwitter twitter = (MainTwitter)sender;
-            Auth.SetUserCredentials(twitter.getConsumerKey(), twitter.getConsumerSecret(), twitter.getUserAccessToken(), twitter.getUserAccessTokenSecret());
-
-        }
-
-        protected virtual void OnLoginCompleted(EventArgs e)
-        {
-            EventHandler handler = this.loginEventHandler;
-            handler(this, e);
         }
 
         public string getUserAccessToken()
@@ -156,8 +133,6 @@ namespace Twitter
         {
             this.userAccessToken = accessToken;
             this.userAccessTokenSecret = accessTokenSecret;
-
-            OnLoginCompleted(new EventArgs());
         }
 
 
