@@ -47,9 +47,8 @@ namespace OpenBrocode
         {
             UserHandler.Mail.newMailMessage(UserHandler.Mail.getMailAddress(), mailTo.Text, subject.Text, body.Text);
 
-            //mailObj.newMailMessage(mailObj.getMailAddress(), mailTo.Text, subject.Text, body.Text);
-
-            subject.Text = "Mail sent";
+            MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
+            mwObj.loadPanel(new mailInboxUC());
         }
 
         private void _cancelBtn_Click(object sender, RoutedEventArgs e)
