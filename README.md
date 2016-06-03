@@ -68,7 +68,7 @@ The other one is to do the following:
 4. Clean, build and start the project
 
 Important: When you get to the login screen, you can as of now only log in as one of the registered users:
-Robin, Bob, John or Daniel. They do not have passwords set so just leave them empty.
+Robin, Bob or John. They do not have passwords set so just leave them empty.
 
 # Contributors
 
