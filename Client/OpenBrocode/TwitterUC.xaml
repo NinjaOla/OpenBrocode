@@ -25,8 +25,8 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Button x:Name="_btnTweet" Grid.Row="1" Content="Send Tweet" HorizontalAlignment="Right" Margin="71,0,0,4" VerticalAlignment="Bottom" Width="145" Height="54" Click="sendTweetClick"/>
-        <TextBox x:Name="tweetTextBox" HorizontalAlignment="Left" Height="30" Margin="0,0,0,10" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom" Width="290" Grid.Row="1"/>
+        <Button x:Name="_btnTweet" Grid.Row="1" Content="Post Tweet" HorizontalAlignment="Right" Margin="71,0,0,4" VerticalAlignment="Bottom" Width="145" Height="54" Click="sendTweetClick"/>
+        <TextBox x:Name="tweetTextBox" HorizontalAlignment="Left" Height="30" Margin="0,0,0,10" TextWrapping="Wrap" Text="Input tweet" VerticalAlignment="Bottom" Width="290" Grid.Row="1"/>
 
 
 

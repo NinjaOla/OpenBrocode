@@ -55,8 +55,9 @@ namespace OpenBrocode
         private void sendTweetClick(object sender, RoutedEventArgs e)
         {
 
-            UserHandler.Twitter.twitterUser.publishTweet(tweetTextBox.Text);
-            tweetTextBox.Text = "twitter sendt";
+            UserHandler.Twitter.User.PublishTweet(tweetTextBox.Text);
+            tweetTextBox.Text = "Input tweet";
+            getTweetsToList();
 
         }
     }

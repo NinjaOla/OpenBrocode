@@ -16,6 +16,8 @@ using System.IO;
 using OpenBrocode.JSON;
 using Twitter;
 using OpenBrocode.User;
+using Mail;
+
 
 
 
@@ -92,6 +94,10 @@ namespace OpenBrocode
         public void saveToFile()
         {
             UserHandler.getUser().settings.writeFile();
+            if(UserHandler.getUser().settings.settings.MailUN != null && UserHandler.getUser().settings.settings.MailPW != null)
+            {
+                UserHandler.Mail = new mailSender(UserHandler.getUser().settings.settings.MailUN, UserHandler.getUser().settings.settings.MailPW);
+            }
 
             //JsonHandler handler = new JsonHandler();
 

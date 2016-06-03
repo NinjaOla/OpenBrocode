@@ -13,6 +13,8 @@ namespace Twitter
 {
     public class TwitterUser
     {
+        private MainTwitter twitter;
+
         private IAuthenticatedUser authenticatedUser;
 
         public IEnumerable<ITweet> HomeTimeline
@@ -25,21 +27,22 @@ namespace Twitter
 
         public TwitterUser(IAuthenticatedUser authenticatedUser)
         {
+            this.twitter = new MainTwitter();
             this.authenticatedUser = authenticatedUser;
         }
 
-        public ITweet publishTweet(string text)
+        /** public ITweet publishTweet(string text)
         {
-            return Tweet.PublishTweet(text);
+            return twitter.User.PublishTweet(text);
 
-           /** IEnumerable<ITwitterException> latestException = ExceptionHandler.GetExceptions();
+            IEnumerable<ITwitterException> latestException = ExceptionHandler.GetExceptions();
 
             foreach (ITwitterException exception in latestException)
             {
                 System.Console.WriteLine("Exception: '{0}'", exception.ToString());
-            } */
+            } 
 
-        }
+        } */
 
         /// <summary>
         /// Butt-ugly way to do this, but it twerks.
