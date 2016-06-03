@@ -58,16 +58,17 @@ and almost 50% had 2-4 open tabs of social media at once.
 
 # Installation
 
-As this project is not yet finished, an installation wizard has not yet been created. It is, however, rather simple to get it running to try it out.
+We have two main ways of installing the program. The first one is to use the provided installation file and then execute the executable in the SocialAwarenessSystem in the target file. The installation file can be downloaded [here](https://github.com/Nyranith/OpenBrocode/blob/master/SAS-installer.exe?raw=true).
+
+The other one is to do the following:
 
 1. Clone the repository
 2. Open it in Visual Studio 2013 or newer (This is written in C#/.Net and is therefore reccommended to be run in Visual Studio)
 3. Open OpenBrocode.sln from the Client folder. 
 4. Clean, build and start the project
 
-# API Reference
-
-# Tests
+Important: When you get to the login screen, you can as of now only log in as one of the registered users:
+Robin, Bob, John or Daniel. They do not have passwords set so just leave them empty.
 
 # Contributors
 
