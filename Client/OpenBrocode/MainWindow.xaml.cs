@@ -33,9 +33,6 @@ namespace OpenBrocode
         public MainWindow()
         {
             InitializeComponent();
-            //windowController.aTest.Content = "this is a test";
-            //windowController.aTest.Background = Brushes.Black; 
-            //this.initialLoadPanel();
             this.loadWelcomePanel();
         }
 

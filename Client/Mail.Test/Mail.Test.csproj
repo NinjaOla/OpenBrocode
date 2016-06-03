@@ -56,9 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\sendMail.csproj">
+    <ProjectReference Include="..\Mail\Mail.csproj">
       <Project>{29930431-d558-47ed-acc8-7bdc5ae00a20}</Project>
-      <Name>sendMail</Name>
+      <Name>Mail</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -34,13 +34,9 @@ namespace OpenBrocode
         {
             UserHandler.Mail.retrieveUnseenMessages();
             List<MailMessage> messages = UserHandler.Mail.messages.ToList();
-            //So we get newest mails first.
             messages.Reverse();
 
             listbox1.ItemsSource = messages;
-
-            //Bindings in .xaml changed from "Sender" to "From" sender didnt leave a mail adress or anything.
-
         }
 
         private void _btnWriteMail_Click(object sender, RoutedEventArgs e)
@@ -51,7 +47,6 @@ namespace OpenBrocode
 
         private void _btnLoadMail_Click(object sender, RoutedEventArgs e)
         {
-            //Added this button because it was quite slow. So optional to load emails.
             getMails();
         }
     }

@@ -23,7 +23,6 @@ namespace OpenBrocode.User
             this.settings = handler.getSettings();
         }
 
-        //TODO: Update this to check if an value is null ... 
         public void writeFile()
         {
             handler.write(this.settings); 

@@ -31,19 +31,6 @@ namespace Twitter
             this.authenticatedUser = authenticatedUser;
         }
 
-        /** public ITweet publishTweet(string text)
-        {
-            return twitter.User.PublishTweet(text);
-
-            IEnumerable<ITwitterException> latestException = ExceptionHandler.GetExceptions();
-
-            foreach (ITwitterException exception in latestException)
-            {
-                System.Console.WriteLine("Exception: '{0}'", exception.ToString());
-            } 
-
-        } */
-
         /// <summary>
         /// Butt-ugly way to do this, but it twerks.
         /// </summary>

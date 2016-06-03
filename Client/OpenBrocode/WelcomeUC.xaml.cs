@@ -34,21 +34,18 @@ namespace OpenBrocode
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            if(this.handler.login(usrNameText.ToString(), ""))
+            if(this.handler.login(usrNameText.ToString(), pwBoxMain.Password.ToString()))
             {
                 MainWindow mwObj = (MainWindow)Application.Current.MainWindow;
                 mwObj.initialLoadPanel();
             }
             else {
-                    MessageBox.Show("You need to enter a valid username!");                
+                    MessageBox.Show("Invalid username or password.");                
             }
         }
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            //Insert register page here. Page or new UC or a separate window?
-            //We also need to decide if the login page should be as it is or as a new window that pops up.
-            //For now, this solution is sufficient.
         }
 
         private void Label_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)

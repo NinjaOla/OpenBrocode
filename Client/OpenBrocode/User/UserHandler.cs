@@ -15,7 +15,7 @@ namespace OpenBrocode.User
         {
             {"Robin", ""} , 
             {"John", ""}, 
-            {"Daniel", ""}, 
+            {"Daniel", "1234"}, 
             {"Bob", ""}
         };
 

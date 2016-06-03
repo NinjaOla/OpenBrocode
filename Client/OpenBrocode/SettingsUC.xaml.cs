@@ -69,20 +69,14 @@ namespace OpenBrocode
         private void btnTwitterClick(object sender, RoutedEventArgs e)
         {
             UserHandler.Twitter.authenticateApp(); 
-            //maintwitter.authenticateApp();
             InputBox.Visibility = Visibility.Visible;
-           
-
-            //OK popupboks knapp med pin - caller på eventhandler.(popup kjører authenticateUser)->
-
-
         }
 
         private void YesButton_Click(object sender, RoutedEventArgs e)
         {
-            //maintwitter.authenticateUser(InputTextBox.Text);
             UserHandler.Twitter.authenticateUser(InputTextBox.Text);
             InputBox.Visibility = Visibility.Collapsed;
+
             chkBoxTwit.IsChecked = true;
             saveToFile();
             _btnTwitter.IsEnabled = false;
@@ -104,11 +98,6 @@ namespace OpenBrocode
             {
                 UserHandler.Mail = new mailSender(UserHandler.getUser().settings.settings.MailUN, UserHandler.getUser().settings.settings.MailPW);
             }
-
-            //JsonHandler handler = new JsonHandler();
-
-            //handler.objectToJson(txtBoxFace.Text, pwBoxFace.Password, (bool)chkBoxFace.IsChecked,
-            //     txtBoxMail.Text, pwBoxMail.Password, (bool)chkBoxMail.IsChecked, (bool)chkBoxTwit.IsChecked);
         }
 
 
